@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Koreana — интернет-магазин корейской косметики в Элисте | Каталог и заказ онлайн</title>
+<meta name="description" content="Корейская косметика в Элисте с заказом онлайн: каталог, корзина, самовывоз из двух магазинов Koreana. Оригинальный k-beauty уход, макияж, парфюмерия.">
+<meta name="keywords" content="корейская косметика Элиста, купить корейскую косметику Элиста, k-beauty Элиста, интернет-магазин косметики Элиста, Koreana Элиста, корейский уход Калмыкия">
+<meta property="og:title" content="Koreana — интернет-магазин корейской косметики в Элисте | Каталог и заказ онлайн">
+<meta property="og:description" content="Корейская косметика в Элисте с заказом онлайн: каталог, корзина, самовывоз из двух магазинов Koreana. Оригинальный k-beauty уход, макияж, парфюмерия.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Tenor+Sans&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#0FB5AE; --teal-2:#15d6cd; --teal-dark:#0a8f89;
+  --navy:#071f38; --navy-2:#0e3357;
+  --ink:#15212e; --muted:#5b6b7b; --muted-2:#8696a6;
+  --bg:#f4f9fb; --surface:#ffffff; --line:#e6eef3;
+  --gold:#ffc83d;
+  /* производные тона (дизайн-блок лида может переопределить любую переменную) */
+  --teal-rgb:15,181,174; --teal-2-rgb:21,214,205; --navy-rgb:7,31,56; --gold-rgb:255,200,61;
+  --soft:#e7f9f7; --soft-2:#d3f3f0; --shine:#8df2ec;
+  --on-dark:#cfe0ee; --on-dark-muted:#a9c0d4; --on-dark-soft:#bcd0e0; --on-dark-bright:#e3eef7;
+  --hero-overlay-rgb:var(--navy-rgb);
+  --display:'Unbounded',system-ui,sans-serif;
+  --sans:'Manrope',system-ui,sans-serif;
+  --display-weight:600;
+  --r-sm:12px; --r:18px; --r-lg:26px; --r-xl:34px;
+  --sh-1:0 4px 18px rgba(var(--navy-rgb),.06);
+  --sh-2:0 14px 44px rgba(var(--navy-rgb),.10);
+  --sh-3:0 30px 70px rgba(var(--navy-rgb),.20);
+  --pad:96px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--surface);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.section{padding:var(--pad) 0}
+h1,h2,h3{font-family:var(--display);font-weight:var(--display-weight);letter-spacing:-.01em;line-height:1.1}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-weight:700;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal-dark);background:var(--soft);padding:7px 14px;border-radius:999px;margin-bottom:18px}
+h2.title{font-size:clamp(30px,4.2vw,46px);color:var(--navy)}
+.lead{font-family:var(--sans);color:var(--muted);font-size:18px;max-width:640px;margin-top:16px;line-height:1.6}
+.center-head{text-align:center;display:flex;flex-direction:column;align-items:center}
+
+.btn{position:relative;display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-weight:700;border:none;cursor:pointer;border-radius:999px;padding:16px 30px;font-size:16px;transition:.25s cubic-bezier(.2,.7,.2,1);line-height:1;overflow:hidden}
+.btn-primary{background:linear-gradient(135deg,var(--teal),var(--teal-2));color:#fff;box-shadow:0 10px 26px rgba(var(--teal-rgb),.4)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(var(--teal-rgb),.5)}
+.btn-primary::after{content:"";position:absolute;top:0;left:-80%;width:60%;height:100%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);transition:.6s}
+.btn-primary:hover::after{left:130%}
+.btn-ghost{background:rgba(255,255,255,.1);color:#fff;border:1.5px solid rgba(255,255,255,.4);backdrop-filter:blur(6px)}
+.btn-ghost:hover{background:rgba(255,255,255,.2);transform:translateY(-2px)}
+.btn-dark{background:var(--navy);color:#fff}
+.btn-dark:hover{transform:translateY(-2px);box-shadow:var(--sh-2)}
+.btn-lg{padding:18px 38px;font-size:17px}
+
+.reveal{opacity:0;transform:translateY(28px) scale(.985);filter:blur(7px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1),filter .9s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none;filter:none}
+
+.demo-bar{background:var(--navy);color:#bfe3e0;text-align:center;font-size:13px;padding:8px 16px;font-weight:600}
+.demo-bar b{color:#fff}
+
+header{position:sticky;top:0;z-index:80;transition:.3s}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:74px;transition:.3s}
+header.scrolled{background:rgba(255,255,255,.88);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
+.logo{display:flex;align-items:center;gap:12px;font-family:var(--display);font-weight:700;font-size:23px;color:var(--navy);letter-spacing:-.02em}
+.logo .mark{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,var(--teal),var(--teal-2));display:grid;place-items:center;color:#fff;font-size:23px;box-shadow:0 8px 20px rgba(var(--teal-rgb),.4)}
+header:not(.scrolled) .logo,header:not(.scrolled) .nav-links a,header:not(.scrolled) .nav-phone{color:#fff}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{font-family:var(--sans);font-weight:600;font-size:15px;transition:.15s;opacity:.92}
+.nav-links a:hover{color:var(--teal)!important;opacity:1}
+.nav-phone{font-family:var(--sans);font-weight:800;font-size:17px;display:flex;align-items:center;gap:8px}
+
+.hero{position:relative;color:#fff;margin-top:-74px;padding-top:74px;min-height:var(--hero-min,92vh);display:flex;align-items:center;background-color:var(--navy);background-size:cover;background-position:center right}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;padding:60px 0 80px;width:100%}
+.hero h1{font-size:clamp(36px,5.2vw,60px);line-height:1.04}
+.hero h1 em{font-style:normal;color:var(--teal-2)}
+.hero p.sub{font-family:var(--sans);font-size:19px;color:var(--on-dark);margin-top:22px;max-width:540px;line-height:1.6}
+.hero-badges{display:flex;flex-wrap:wrap;gap:11px;margin-top:28px}
+.hbadge{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);padding:10px 16px;border-radius:999px;font-family:var(--sans);font-size:14px;font-weight:600;color:var(--on-dark-bright);backdrop-filter:blur(6px)}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.hero-trust{display:flex;align-items:center;gap:14px;margin-top:30px;color:var(--on-dark-muted);font-family:var(--sans);font-size:14px}
+.stars{color:var(--gold);letter-spacing:2px}
+
+.booking-card{background:rgba(255,255,255,.97);color:var(--ink);border-radius:var(--r-lg);padding:30px;box-shadow:var(--sh-3);position:relative}
+.booking-card .ribbon{position:absolute;top:-13px;right:24px;background:linear-gradient(135deg,var(--teal),var(--teal-2));color:#fff;font-family:var(--sans);font-weight:700;font-size:12.5px;padding:7px 15px;border-radius:999px;box-shadow:0 8px 18px rgba(var(--teal-rgb),.45)}
+.booking-card h3{font-family:var(--display);font-size:23px;color:var(--navy)}
+.booking-card .sub{font-family:var(--sans);color:var(--muted);font-size:14.5px;margin-top:7px;margin-bottom:20px}
+.field{margin-bottom:14px}
+.field label{display:block;font-family:var(--sans);font-size:13px;font-weight:700;color:var(--navy);margin-bottom:7px}
+.field input,.field select{width:100%;padding:14px 15px;border:1.5px solid var(--line);border-radius:var(--r-sm);font-size:15px;font-family:var(--sans);background:#fbfdfe;transition:.18s}
+.field input:focus,.field select:focus{outline:none;border-color:var(--teal);background:#fff;box-shadow:0 0 0 4px rgba(var(--teal-rgb),.13)}
+.form-note{font-family:var(--sans);font-size:12px;color:var(--muted-2);text-align:center;margin-top:13px}
+.booking-ok{display:none;text-align:center;padding:24px 8px}
+.booking-ok .ico{width:66px;height:66px;border-radius:50%;background:var(--soft);color:var(--teal);display:grid;place-items:center;margin:0 auto 16px;font-size:32px;animation:pop .5s cubic-bezier(.2,1.4,.4,1)}
+@keyframes pop{from{transform:scale(0)}to{transform:scale(1)}}
+.booking-ok h4{font-family:var(--display);color:var(--navy);font-size:21px}
+.booking-ok p{font-family:var(--sans);color:var(--muted);font-size:14.5px;margin-top:10px}
+
+.trust-strip{background:var(--navy);color:var(--on-dark-muted)}
+.trust-strip .wrap{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;padding:22px}
+.trust-item{display:flex;align-items:center;gap:11px;font-family:var(--sans);font-size:14.5px;font-weight:600}
+.trust-item .ic{width:34px;height:34px;border-radius:9px;background:rgba(var(--teal-rgb),.16);color:var(--teal-2);display:grid;place-items:center}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;background:#fff;border-radius:var(--r-lg);box-shadow:var(--sh-2);padding:40px;margin-top:-52px;position:relative;z-index:5;border:1px solid var(--line)}
+.stat{text-align:center;position:relative}
+.stat:not(:last-child)::after{content:"";position:absolute;right:-13px;top:10%;height:80%;width:1px;background:var(--line)}
+.stat .num{font-family:var(--display);font-size:42px;font-weight:700;color:var(--navy);line-height:1}
+.stat .num small{color:var(--teal);font-size:.7em}
+.stat .lbl{font-family:var(--sans);color:var(--muted);font-size:14px;margin-top:9px;font-weight:600}
+
+.grid-services{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:50px}
+.scard{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:30px;transition:.28s cubic-bezier(.2,.7,.2,1);overflow:hidden}
+.scard::before{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(var(--teal-rgb),.07),transparent 60%);opacity:0;transition:.28s}
+.scard:hover{box-shadow:var(--sh-2);transform:translateY(-6px);border-color:transparent}
+.scard:hover::before{opacity:1}
+.scard .ico{width:58px;height:58px;border-radius:16px;background:linear-gradient(135deg,var(--soft),var(--soft-2));color:var(--teal-dark);display:grid;place-items:center;margin-bottom:18px;font-size:26px;position:relative}
+.scard h3{font-family:var(--display);font-size:20px;color:var(--navy);position:relative}
+.scard p{font-family:var(--sans);color:var(--muted);font-size:15px;margin-top:9px;position:relative}
+.scard .price{margin-top:18px;font-family:var(--display);font-weight:var(--display-weight);color:var(--navy);font-size:17px;position:relative}
+.scard .price span{font-family:var(--sans);color:var(--muted);font-weight:600;font-size:13px}
+
+.ba-section{background:var(--bg)}
+.ba{position:relative;max-width:760px;margin:46px auto 0;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh-2);aspect-ratio:16/10;user-select:none;touch-action:none;background:var(--navy-2) center/cover no-repeat}
+.ba .after{position:absolute;inset:0;background:var(--navy-2) center/cover no-repeat;clip-path:inset(0 0 0 var(--pos,50%))}
+.ba .lbl{position:absolute;top:16px;font-family:var(--sans);font-weight:700;font-size:12.5px;letter-spacing:.05em;background:rgba(var(--navy-rgb),.7);color:#fff;padding:6px 13px;border-radius:999px;backdrop-filter:blur(4px)}
+.ba .lbl.l{left:16px}.ba .lbl.r{right:16px}
+.ba .handle{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:3px;background:#fff;box-shadow:0 0 14px rgba(0,0,0,.4);transform:translateX(-50%)}
+.ba .handle::after{content:"\21C4";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:#fff;color:var(--teal-dark);display:grid;place-items:center;font-size:20px;box-shadow:var(--sh-2);cursor:ew-resize}
+
+.why{position:relative;color:#fff;background-color:var(--navy);background-size:cover;background-position:center}
+.why .lead{color:var(--on-dark-soft)}
+.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:46px}
+.wcard{display:flex;gap:17px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:26px;transition:.25s;backdrop-filter:blur(4px)}
+.wcard:hover{background:rgba(255,255,255,.1);transform:translateY(-4px)}
+.wcard .ico{flex:0 0 auto;width:50px;height:50px;border-radius:13px;background:rgba(var(--teal-rgb),.2);color:var(--teal-2);display:grid;place-items:center;font-size:23px}
+.wcard h3{font-family:var(--display);font-size:18px}
+.wcard p{font-family:var(--sans);color:var(--on-dark-soft);font-size:14.5px;margin-top:7px}
+
+.grid-doctors{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:50px}
+.doc{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;transition:.28s cubic-bezier(.2,.7,.2,1)}
+.doc:hover{box-shadow:var(--sh-2);transform:translateY(-6px)}
+.doc .ph{aspect-ratio:3/3.4;position:relative;background-color:var(--navy-2);background-size:cover;background-position:center top;display:grid;place-items:end center}
+.doc .ph .init{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--display);font-size:40px;color:rgba(255,255,255,.5)}
+.doc .ph .exp{position:relative;z-index:2;margin-bottom:12px;background:rgba(255,255,255,.92);color:var(--teal-dark);font-family:var(--sans);font-weight:700;font-size:12px;padding:5px 12px;border-radius:999px}
+.doc .info{padding:18px 20px}
+.doc h3{font-family:var(--display);font-size:17px;color:var(--navy)}
+.doc p{font-family:var(--sans);color:var(--muted);font-size:13.5px;margin-top:5px}
+
+.rev-head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px}
+.rating-box{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px 24px;display:flex;align-items:center;gap:16px;box-shadow:var(--sh-1)}
+.rating-box .big{font-family:var(--display);font-size:40px;color:var(--navy);line-height:1}
+.grid-reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:46px}
+.rev{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:28px;transition:.25s;position:relative}
+.rev:hover{box-shadow:var(--sh-2);transform:translateY(-4px)}
+.rev .q{font-family:var(--display);font-size:46px;color:var(--soft);line-height:.6;height:24px}
+.rev .stars{font-size:15px;margin:6px 0 12px}
+.rev p{font-family:var(--sans);color:var(--ink);font-size:15px;line-height:1.6}
+.rev .who{display:flex;align-items:center;gap:12px;margin-top:20px}
+.rev .av{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--teal-2));display:grid;place-items:center;color:#fff;font-family:var(--display);font-size:18px}
+.rev .who b{font-family:var(--sans);color:var(--navy);font-size:14.5px;display:block}
+.rev .who span{font-family:var(--sans);color:var(--muted);font-size:12.5px}
+
+.cta-band{position:relative;border-radius:var(--r-xl);padding:64px;text-align:center;overflow:hidden;color:#fff;background:linear-gradient(120deg,var(--teal-dark),var(--teal) 55%,var(--teal-2))}
+.cta-band::before{content:"";position:absolute;top:-40%;right:-10%;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.22),transparent 70%)}
+.cta-band h2{font-size:clamp(28px,3.6vw,42px);color:#fff;position:relative}
+.cta-band p{font-family:var(--sans);font-size:18px;margin-top:14px;opacity:.96;position:relative}
+.cta-band .btn{margin-top:28px;background:#fff;color:var(--teal-dark);position:relative}
+.cta-band .btn:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(0,0,0,.22)}
+
+.faq{max-width:800px;margin:46px auto 0}
+.qa{border:1px solid var(--line);border-radius:var(--r);margin-bottom:14px;background:#fff;transition:.2s;overflow:hidden}
+.qa[open]{box-shadow:var(--sh-1);border-color:transparent}
+.qa summary{cursor:pointer;list-style:none;padding:22px 24px;font-family:var(--display);font-weight:var(--display-weight);font-size:17px;color:var(--navy);display:flex;justify-content:space-between;align-items:center;gap:16px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary .plus{flex:0 0 auto;width:28px;height:28px;border-radius:50%;background:var(--soft);color:var(--teal);display:grid;place-items:center;font-size:19px;transition:.25s}
+.qa[open] summary .plus{transform:rotate(135deg)}
+.qa p{font-family:var(--sans);color:var(--muted);font-size:15.5px;padding:0 24px 22px;line-height:1.6}
+
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:16px;margin-top:46px}
+.gphoto{border-radius:var(--r);overflow:hidden;position:relative;background:linear-gradient(135deg,var(--navy-2),var(--navy));background-size:cover;background-position:center;transition:.4s cubic-bezier(.2,.7,.2,1)}
+.gphoto::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(var(--navy-rgb),.35),transparent 50%);opacity:0;transition:.3s}
+.gphoto:hover{transform:scale(1.02)}
+.gphoto:hover::after{opacity:1}
+.gphoto.tall{grid-row:span 2}
+.gphoto.wide{grid-column:span 2}
+
+.map-wrap{display:grid;grid-template-columns:1fr 1.3fr;gap:0;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh-2);margin-top:46px;border:1px solid var(--line)}
+.map-info{background:var(--navy);color:var(--on-dark);padding:44px}
+.map-info h3{font-family:var(--display);color:#fff;font-size:24px;margin-bottom:20px}
+.map-info .row{display:flex;gap:14px;align-items:flex-start;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.map-info .row:last-of-type{border-bottom:none}
+.map-info .ic{flex:0 0 auto;width:42px;height:42px;border-radius:11px;background:rgba(var(--teal-rgb),.18);color:var(--teal-2);display:grid;place-items:center;font-size:20px}
+.map-info .row b{font-family:var(--sans);color:#fff;font-size:15.5px;display:block}
+.map-info .row span{font-family:var(--sans);font-size:14px;color:var(--on-dark-muted)}
+.map-info .row a{color:#fff}
+.map-frame{min-height:420px;background:#dce8ee;position:relative}
+.map-frame iframe{width:100%;height:100%;border:0;display:block}
+
+footer{position:relative;color:var(--on-dark-muted);background:var(--navy);padding:70px 0 30px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.1fr;gap:38px}
+footer .logo{color:#fff;margin-bottom:16px}
+footer h4{font-family:var(--sans);color:#fff;font-size:14px;font-weight:700;margin-bottom:16px;letter-spacing:.04em;text-transform:uppercase}
+footer a,footer li{font-family:var(--sans);color:var(--on-dark-muted);font-size:14.5px;line-height:2;list-style:none;transition:.15s}
+footer a:hover{color:var(--teal-2)}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:44px;padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-family:var(--sans);font-size:13px;color:#6f8499}
+
+.mobile-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:90;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:11px 14px;gap:10px;box-shadow:0 -8px 30px rgba(var(--navy-rgb),.1)}
+.mobile-cta .btn{flex:1;justify-content:center;padding:15px;font-size:15px}
+
+@media(max-width:920px){
+  :root{--pad:64px}
+  .hero-grid{grid-template-columns:1fr;gap:34px;padding:30px 0 60px}
+  .hero{min-height:auto}
+  .stats{grid-template-columns:repeat(2,1fr);gap:22px;padding:30px}
+  .stat:nth-child(2)::after{display:none}
+  .grid-services,.why-grid,.grid-reviews{grid-template-columns:1fr}
+  .grid-doctors{grid-template-columns:repeat(2,1fr)}
+  .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}
+  .map-wrap{grid-template-columns:1fr}
+  .map-info{padding:30px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .nav-links,.nav-phone{display:none}
+  .cta-band{padding:40px 24px}
+  .mobile-cta{display:flex}
+  body{padding-bottom:76px}
+}
+@media(max-width:520px){
+  .grid-doctors,.foot-grid{grid-template-columns:1fr}
+  .stat .num{font-size:34px}
+  .trust-strip .wrap{justify-content:center}
+}
+/* ===== WOW-слой: «бомбический» уровень поверх базовой темы ===== */
+
+::selection{background:var(--teal);color:#fff}
+::-webkit-scrollbar{width:11px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:linear-gradient(var(--teal),var(--navy-2));border-radius:99px;border:2px solid var(--bg)}
+
+/* полоса прогресса чтения */
+.scroll-progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:120;background:linear-gradient(90deg,var(--teal),var(--teal-2));box-shadow:0 0 12px rgba(var(--teal-2-rgb),.8);pointer-events:none}
+
+/* аврора-свечения в hero */
+.hero{overflow:hidden}
+.hero .fx{position:absolute;inset:0;pointer-events:none;overflow:hidden;transition:transform .4s ease-out}
+.hero .blob{position:absolute;display:block;border-radius:50%;filter:blur(70px);opacity:.5;mix-blend-mode:screen;animation:drift 16s ease-in-out infinite alternate}
+.hero .b1{width:520px;height:520px;left:-120px;top:-140px;background:radial-gradient(circle,rgba(var(--teal-rgb),.55),transparent 65%)}
+.hero .b2{width:440px;height:440px;right:6%;bottom:-180px;background:radial-gradient(circle,rgba(var(--teal-2-rgb),.35),transparent 65%);animation-delay:-6s;animation-duration:21s}
+.hero .b3{width:300px;height:300px;left:38%;top:8%;background:radial-gradient(circle,rgba(var(--gold-rgb),.16),transparent 65%);animation-delay:-11s;animation-duration:25s}
+@keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(60px,40px) scale(1.15)}}
+
+/* живой градиент в акценте заголовка */
+.hero h1 em{background:linear-gradient(90deg,var(--teal-2),var(--shine) 45%,#fff 55%,var(--teal-2));background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine-text 6s linear infinite}
+@keyframes shine-text{to{background-position:-220% 0}}
+
+/* пульс главной кнопки формы записи */
+#bookForm .btn-primary{animation:pulse-glow 2.8s ease-in-out infinite}
+@keyframes pulse-glow{0%,100%{box-shadow:0 10px 26px rgba(var(--teal-rgb),.4)}50%{box-shadow:0 12px 38px rgba(var(--teal-rgb),.72)}}
+
+/* карточки услуг: градиентная рамка + живая иконка */
+.scard .ico{transition:.28s cubic-bezier(.2,.7,.2,1)}
+.scard:hover .ico{transform:scale(1.1) rotate(-5deg)}
+.scard::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;background:linear-gradient(135deg,var(--teal),transparent 38%,transparent 62%,var(--teal-2));-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:.28s;pointer-events:none}
+.scard:hover::after{opacity:1}
+
+/* отзывы: тёплая верхняя кромка при ховере */
+.rev::after{content:"";position:absolute;top:0;left:24px;right:24px;height:3px;border-radius:0 0 6px 6px;background:linear-gradient(90deg,var(--teal),var(--teal-2));opacity:0;transition:.25s}
+.rev:hover::after{opacity:1}
+
+/* CTA-полоса: вращающийся блик */
+.cta-band::after{content:"";position:absolute;inset:-60%;background:conic-gradient(from 0deg,transparent,rgba(255,255,255,.16) 12%,transparent 26%);animation:spin 9s linear infinite;pointer-events:none}
+@keyframes spin{to{transform:rotate(1turn)}}
+
+@media(max-width:920px){.hero .blob{filter:blur(50px);opacity:.35}}
+@media (prefers-reduced-motion:reduce){
+  .reveal{transition:none;opacity:1;transform:none;filter:none}
+  .hero .blob,.cta-band::after,#bookForm .btn-primary,.hero h1 em{animation:none}
+}
+
+/* ===== Магазин: каталог + корзина (рендерится при наличии секции "catalog") ===== */
+.cart-btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--sans);font-weight:700;font-size:14.5px;color:#fff;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.35);border-radius:999px;padding:9px 16px;cursor:pointer;transition:.2s;backdrop-filter:blur(6px)}
+header.scrolled .cart-btn,body.hero-light .cart-btn{background:#fff;border-color:var(--line);color:var(--navy);box-shadow:var(--sh-1);backdrop-filter:none}
+.cart-btn:hover{transform:translateY(-1px)}
+.cart-count{min-width:20px;height:20px;border-radius:999px;background:linear-gradient(135deg,var(--teal),var(--teal-2));color:#fff;font-size:12px;font-weight:800;display:grid;place-items:center;padding:0 5px}
+
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:34px}
+.chip{font-family:var(--sans);font-weight:700;font-size:14px;color:var(--navy);background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:10px 18px;cursor:pointer;transition:.2s}
+.chip:hover{border-color:var(--teal);color:var(--teal-dark)}
+.chip.active{background:var(--navy);border-color:var(--navy);color:#fff}
+
+.grid-products{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:40px}
+.pcard{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;transition:.28s cubic-bezier(.2,.7,.2,1)}
+.pcard:hover{transform:translateY(-6px);box-shadow:var(--sh-2)}
+.pimg{position:relative;aspect-ratio:1/1.05;background:linear-gradient(135deg,var(--soft),var(--soft-2));background-size:cover;background-position:center;overflow:hidden}
+/* сигнатура «glass skin»: глянцевый блик по фото товара */
+.pimg::after{content:"";position:absolute;top:0;left:-80%;width:55%;height:100%;background:linear-gradient(115deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-18deg);transition:.55s}
+.pcard:hover .pimg::after{left:135%}
+.pbadge{position:absolute;top:12px;left:12px;font-family:var(--sans);font-weight:700;font-size:12px;background:var(--navy);color:#fff;padding:6px 12px;border-radius:999px;z-index:2}
+.pbody{display:flex;flex-direction:column;gap:4px;padding:16px 18px 18px;flex:1}
+.pbrand{font-family:var(--sans);font-weight:700;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-dark)}
+.pcard h3{font-family:var(--sans);font-weight:700;font-size:15.5px;color:var(--navy);line-height:1.35;letter-spacing:0}
+.pvol{font-family:var(--sans);font-size:12.5px;color:var(--muted-2)}
+.prow{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:12px}
+.pprice{font-family:var(--display);font-weight:var(--display-weight);font-size:19px;color:var(--navy);white-space:nowrap}
+.pprice s{font-family:var(--sans);font-size:13px;color:var(--muted-2);margin-left:7px}
+.padd{padding:11px 16px;font-size:14px;box-shadow:none}
+.padd.added{background:var(--navy)}
+.catalog-note{font-family:var(--sans);font-size:13px;color:var(--muted-2);text-align:center;margin-top:26px}
+
+.shop-overlay{position:fixed;inset:0;background:rgba(var(--navy-rgb),.45);backdrop-filter:blur(3px);opacity:0;pointer-events:none;transition:.3s;z-index:125}
+.shop-overlay.on{opacity:1;pointer-events:auto}
+.cart-drawer{position:fixed;top:0;right:0;bottom:0;width:min(430px,100%);background:#fff;z-index:130;display:flex;flex-direction:column;box-shadow:var(--sh-3);transform:translateX(105%);transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.cart-drawer.open{transform:none}
+.cart-head{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;border-bottom:1px solid var(--line);flex:0 0 auto}
+.cart-head h3{font-family:var(--display);font-weight:var(--display-weight);font-size:22px;color:var(--navy)}
+.cart-x{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:15px;color:var(--muted);transition:.2s}
+.cart-x:hover{color:var(--navy);border-color:var(--muted-2)}
+.cart-view{display:flex;flex-direction:column;flex:1;min-height:0}
+.cart-items{flex:1;overflow:auto;padding:6px 24px}
+.cart-row{display:flex;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.cart-row .th{width:62px;height:62px;border-radius:var(--r-sm);background:linear-gradient(135deg,var(--soft),var(--soft-2));background-size:cover;background-position:center;flex:0 0 auto}
+.cart-row .nm{font-family:var(--sans);font-weight:600;font-size:14px;color:var(--navy);line-height:1.3}
+.cart-row .pr{font-family:var(--sans);font-weight:700;font-size:14px;color:var(--teal-dark);margin-top:3px}
+.qty{display:flex;align-items:center;gap:2px;margin-left:auto}
+.qty button{width:28px;height:28px;border-radius:9px;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:15px;color:var(--navy)}
+.qty b{min-width:26px;text-align:center;font-family:var(--sans);font-size:14px}
+.cart-rm{margin-left:6px;border:none;background:none;color:var(--muted-2);cursor:pointer;font-size:15px}
+.cart-rm:hover{color:var(--teal-dark)}
+.cart-empty{flex:1;display:none;flex-direction:column;align-items:center;justify-content:center;gap:18px;text-align:center;font-family:var(--sans);color:var(--muted);padding:30px;font-size:15px}
+.cart-foot{padding:18px 24px 22px;border-top:1px solid var(--line);flex:0 0 auto}
+.cart-total{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--sans);font-size:16px;color:var(--muted);margin-bottom:14px}
+.cart-total b{font-family:var(--display);font-weight:var(--display-weight);font-size:24px;color:var(--navy)}
+.cart-foot .btn{width:100%;justify-content:center}
+.cart-checkout{display:none;flex-direction:column;flex:1;min-height:0;overflow:auto;padding:20px 24px}
+.cart-back{font-family:var(--sans);font-size:13.5px;font-weight:600;color:var(--muted);background:none;border:none;cursor:pointer;text-align:left;margin-bottom:14px;padding:0}
+.cart-back:hover{color:var(--navy)}
+.co-total{display:flex;justify-content:space-between;font-family:var(--sans);font-size:15px;color:var(--muted);padding:13px 0;margin-bottom:6px;border-top:1px solid var(--line)}
+.co-total b{font-family:var(--display);font-weight:var(--display-weight);font-size:19px;color:var(--navy)}
+.cart-ok{display:none;flex:1;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px}
+.cart-ok .ico{width:66px;height:66px;border-radius:50%;background:var(--soft);color:var(--teal);display:grid;place-items:center;margin-bottom:16px;font-size:32px;animation:pop .5s cubic-bezier(.2,1.4,.4,1)}
+.cart-ok h4{font-family:var(--display);font-weight:var(--display-weight);color:var(--navy);font-size:21px}
+.cart-ok p{font-family:var(--sans);color:var(--muted);font-size:14.5px;margin-top:10px;max-width:300px}
+.chip:focus-visible,.padd:focus-visible,.cart-btn:focus-visible,.cart-x:focus-visible,.qty button:focus-visible{outline:3px solid rgba(var(--teal-rgb),.5);outline-offset:2px}
+@media(max-width:920px){
+  .grid-products{grid-template-columns:repeat(2,1fr);gap:14px}
+  .chips{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap;padding-bottom:6px;margin-left:-22px;margin-right:-22px;padding-left:22px;padding-right:22px}
+  .chip{flex:0 0 auto}
+}
+@media(max-width:520px){
+  .pbody{padding:12px 14px 14px}
+  .prow{flex-direction:column;align-items:stretch;gap:8px}
+  .padd{justify-content:center}
+}
+@media (prefers-reduced-motion:reduce){.cart-drawer,.shop-overlay,.pimg::after{transition:none}.cart-ok .ico{animation:none}}
+
+/* ===== Вариант hero: светлый (design.hero = "light") ===== */
+body.hero-light .hero{color:var(--ink);background-color:var(--bg)}
+body.hero-light header:not(.scrolled) .logo,
+body.hero-light header:not(.scrolled) .nav-links a,
+body.hero-light header:not(.scrolled) .nav-phone{color:var(--navy)}
+body.hero-light .hero h1{color:var(--navy)}
+body.hero-light .hero h1 em{background:linear-gradient(90deg,var(--teal-dark),var(--teal) 45%,var(--teal-2) 55%,var(--teal-dark));background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent}
+body.hero-light .hero p.sub{color:var(--muted)}
+body.hero-light .hbadge{background:#fff;border:1px solid var(--line);color:var(--navy);box-shadow:var(--sh-1);backdrop-filter:none}
+body.hero-light .hero-trust{color:var(--muted)}
+body.hero-light .hero .btn-ghost{background:#fff;color:var(--navy);border-color:var(--line);backdrop-filter:none}
+body.hero-light .hero .btn-ghost:hover{background:var(--soft)}
+body.hero-light .hero .blob{mix-blend-mode:multiply;opacity:.38}
+body.hero-light .booking-card{border:1px solid var(--line)}
+
+:root{--teal:#C9426F;--teal-rgb:201,66,111;--teal-2:#F08FB3;--teal-2-rgb:240,143,179;--teal-dark:#A82F58;--navy:#2A1230;--navy-rgb:42,18,48;--navy-2:#4A2150;--bg:#FBF4F7;--line:#F2DEE7;--soft:#FBE6EF;--soft-2:#F6D2E2;--gold:#E8B84B;--gold-rgb:232,184,75;--shine:#FFC9DE;--on-dark:#F2DCE8;--on-dark-muted:#CBA9BE;--on-dark-soft:#E3C4D6;--on-dark-bright:#F8E7F0;--display:'Tenor Sans',sans-serif;--r-sm:14px;--r:20px;--r-lg:30px;--r-xl:40px;--display-weight:400;--hero-min:74vh}
+</style>
+</head>
+<body class="hero-light">
+<div class="demo-bar">🔧 <b>DEMO интернет-магазина</b> для «Koreana» · адреса, телефон, часы работы, рейтинг и отзыв — реальные · <b>каталог демонстрационный: товары-примеры и ориентировочные цены, не прайс магазина</b>; заказ в демо никуда не отправляется · фото — временные, заменим на ваши · в рабочей версии: реальный ассортимент, заказы менеджеру в Telegram</div>
+<div class="scroll-progress" id="sprog"></div>
+<header id="hdr">
+  <div class="wrap header-inner">
+    <a href="#" class="logo"><span class="mark">🌸</span> Koreana</a>
+    <nav class="nav-links"><a href="#catalog">Каталог</a><a href="#why">Почему мы</a><a href="#reviews">Отзывы</a><a href="#contacts">Контакты</a></nav>
+    <a href="tel:+79374672020" class="nav-phone">📞 8 (937) 467-20-20</a>
+    <button class="cart-btn" id="cartOpen" aria-label="Открыть корзину">🛍 Корзина<b class="cart-count" id="cartCount">0</b></button>
+  </div>
+</header>
+<section class="hero" style="background-image:linear-gradient(105deg,rgba(255,255,255,.97) 0%,rgba(255,255,255,.88) 42%,rgba(255,255,255,.55) 100%),url('https://images.unsplash.com/photo-1522338242992-e1a54906a8da?w=1600&amp;q=80');">
+  <div class="fx"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span></div>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="hero-badges reveal"><span class="hbadge">2 магазина в Элисте</span><span class="hbadge">Оригинальная продукция</span><span class="hbadge">Заказ онлайн за минуту</span></div>
+      <h1 class="reveal" style="transition-delay:.06s">Корейская косметика<br>в <em>Элисте</em> — теперь онлайн</h1>
+      <p class="sub reveal" style="transition-delay:.12s">Выбирайте в каталоге с ценами, кладите в корзину и <b>забирайте сегодня в удобном магазине</b> — без переписки в директе и ожидания ответа.</p>
+      <div class="hero-cta reveal" style="transition-delay:.18s">
+        <a href="#catalog" class="btn btn-primary btn-lg">Смотреть каталог</a>
+        <a href="#booking" class="btn btn-ghost btn-lg">Подбор консультанта</a>
+      </div>
+      <div class="hero-trust reveal" style="transition-delay:.24s">
+        <span class="stars">★★★★☆</span>
+        <span>Покупательницы хвалят консультантов — Яндекс.Карты</span>
+      </div>
+    </div>
+    <div class="booking-card reveal" id="booking" style="transition-delay:.1s">
+      <span class="ribbon">Ответим в течение дня</span>
+      <form id="bookForm">
+        <h3>Подобрать косметику</h3>
+        <p class="sub">Опишите задачу — консультант подберёт средство под ваш тип кожи или соберёт подарочный набор. Ответим в рабочее время (10:00–20:00).</p>
+        <div class="field"><label for="bname">Ваше имя</label><input id="bname" type="text" placeholder="Как к вам обращаться" required></div>
+        <div class="field"><label for="bphone">Телефон</label><input id="bphone" type="tel" inputmode="tel" placeholder="+7 (___) ___-__-__" required></div>
+        <div class="field"><label for="bservice">Услуга</label><select id="bservice"><option>Уход за лицом</option><option>Декоративная косметика</option><option>Парфюмерия</option><option>Уход за волосами</option><option>Подобрать подарочный набор</option><option>Уточнить наличие бренда</option></select></div>
+        <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center">Отправить запрос</button>
+        <p class="form-note">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</p>
+      </form>
+      <div class="booking-ok" id="bookOk">
+        <div class="ico">✓</div>
+        <h4>Заявка принята!</h4>
+        <p>В рабочей версии заявка сразу уходит менеджеру в <b>Telegram или Instagram Direct</b> — не надо ждать, пока кто-то проверит директ вручную.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="wrap"><div class="stats reveal"><div class="stat"><div class="num">2</div><div class="lbl">Магазина в Элисте</div></div><div class="stat"><div class="num">6</div><div class="lbl">Категорий ассортимента</div></div><div class="stat"><div class="num">10</div><div class="lbl">Часов работы в день</div></div><div class="stat"><div class="num">4.0<small>★</small></div><div class="lbl">Рейтинг Яндекс.Карты</div></div></div></div>
+<div class="trust-strip"><div class="wrap"><div class="trust-item"><span class="ic">🇰🇷</span> Только оригинальная продукция</div><div class="trust-item"><span class="ic">💁</span> Консультант по составу кожи</div><div class="trust-item"><span class="ic">🏪</span> 2 магазина в Элисте</div><div class="trust-item"><span class="ic">🎁</span> Подарочные наборы по бюджету</div><div class="trust-item"><span class="ic">🕙</span> Ежедневно 10:00–20:00</div></div></div>
+<section class="section" id="catalog" style="background:var(--bg)">
+  <div class="wrap">
+    <div class="reveal center-head">
+      <span class="eyebrow">Каталог</span>
+      <h2 class="title">Выбирайте онлайн — забирайте в магазине</h2>
+      <p class="lead" style="text-align:center">Оригинальный k-beauty: уход, макияж, парфюмерия. Положите в корзину — заберёте сегодня на Ленина или Клыкова.</p>
+    </div>
+    <div class="chips reveal"><button class="chip active" data-cat="*">Все</button><button class="chip" data-cat="Уход за лицом">Уход за лицом</button><button class="chip" data-cat="Макияж">Макияж</button><button class="chip" data-cat="Парфюмерия">Парфюмерия</button><button class="chip" data-cat="Волосы">Волосы</button><button class="chip" data-cat="Тело">Тело</button><button class="chip" data-cat="Наборы">Наборы</button></div>
+    <div class="grid-products"><div class="pcard reveal" data-cat="Уход за лицом" style="">
+  <div class="pimg" style="background-image:url('https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&amp;q=80')"><span class="pbadge">Хит</span></div>
+  <div class="pbody"><div class="pbrand">COSRX</div><h3>Эссенция с муцином улитки Advanced Snail 96</h3><div class="pvol">100 мл</div>
+    <div class="prow"><div class="pprice">1 690 ₽</div>
+    <button class="btn btn-primary padd" type="button" data-id="snail-essence">В корзину</button></div>
+  </div>
+</div><div class="pcard reveal" data-cat="Уход за лицом" style="transition-delay:.06s">
+  <div class="pimg" style="background-image:url('https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&amp;q=80')"><span class="pbadge">Хит</span></div>
+  <div class="pbody"><div class="pbrand">Beauty of Joseon</div><h3>Солнцезащитный крем Relief Sun SPF50+ PA++++</h3><div class="pvol">50 мл</div>
+    <div class="prow"><div class="pprice">1 390 ₽</div>
+    <button class="btn btn-primary padd" type="button" data-id="boj-sun">В корзину</button></div>
+  </div>
+</div><div class="pcard reveal" data-cat="Уход за лицом" style="transition-delay:.12s">
+  <div class="pimg" style="background-image:url('https://images.unsplash.com/photo-1612817288484-6f916006741a?w=600&amp;q=80')"></div>
+  <div class="pbody"><div class="pbrand">Anua</div><h3>Успокаивающий тонер Heartleaf 77%</h3><div class="pvol">250 мл</div>
+    <div class="prow"><div class="pprice">1 790 ₽</div>
+    <button class="btn btn-primary padd" type="button" data-id="anua-toner">В корзину</button></div>
+  </div>
+</div><div class="pcard reveal" data-cat="Уход за лицом" style="transition-delay:.18s">
+  <div class="pimg" style="background-image:url('https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&amp;q=80')"></div>
+  <div class="pbody"><div class="pbrand">Mixsoon</div><h3>Эссенция для мягкого пилинга Bean Essence</h3><div class="pvol">50 мл</div>
+    <div class="prow"><div class="pprice">1 990 ₽</div>
+    <button class="btn btn-primary padd" type="button" data-id="mixsoon-bean">В корзину</button></div>
+  </div>
+</div><div class="pcard reveal" data-cat="Макияж" style="">
+  <div class="pimg" style="background-image:url('https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=600&amp;q=80')"></div>
+  <div class="pbody"><div class="pbrand">rom&amp;nd</div><h3>Стойкий тинт для губ Juicy Lasting Tint</h3><div class="pvol">5,5 г</div>
+    <div class="prow"><div class="pprice">950 ₽</div>
+    <button class="btn btn-primary padd" type="button" data-id="romand-tint">В корзину</button></div>
+  </div>
+</div><div class="pcard reveal" data-cat="Макияж" style="transition-delay:.06s">
+  <div class="pimg" style="background-image:url('https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=600&amp;q=80')"></div>
+  <div class="pbody"><div class="pbrand">CLIO</div><h3>Кушон Kill Cover The New Founwear</h3><div class="pvol">15 г × 2</div>
+    <div class="prow"><div class="pprice">2 290 ₽</div>
+    <button class="btn btn-primary padd" type="button" data-id="clio-cushion">В корзину</button></div>
+  </div>
+</div><div class="pcard reveal" data-cat="Парфюмерия" style="transition-delay:.12s">
+  <div class="pimg" style="background-image:url('https://images.unsplash.com/photo-1594035910387-fea47794261f?w=600&amp;q=80')"></div>
+  <div class="pbody"><div class="pbrand">W.Dressroom</div><h3>Аромаспрей Dress &amp; Living Clear №97</h3><div class="pvol">70 мл</div>
+    <div class="prow"><div class="pprice">1 290 ₽</div>
+    <button class="btn btn-primary padd" type="button" data-id="wdressroom">В корзину</button></div>
+  </div>
+</div><div class="pcard reveal" data-cat="Волосы" style="transition-delay:.18s">
+  <div class="pimg" style="background-image:url('https://images.unsplash.com/photo-1526947425960-945c6e72858f?w=600&amp;q=80')"><span class="pbadge">Хит</span></div>
+  <div class="pbody"><div class="pbrand">Masil</div><h3>Маска для волос 8 Seconds Salon Hair Mask</h3><div class="pvol">200 мл</div>
+    <div class="prow"><div class="pprice">1 190 ₽</div>
+    <button class="btn btn-primary padd" type="button" data-id="masil-mask">В корзину</button></div>
+  </div>
+</div><div class="pcard reveal" data-cat="Волосы" style="">
+  <div class="pimg" style="background-image:url('https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=600&amp;q=80')"></div>
+  <div class="pbody"><div class="pbrand">Esthetic House</div><h3>Протеиновая маска CP-1 Premium Treatment</h3><div class="pvol">250 мл</div>
+    <div class="prow"><div class="pprice">890 ₽</div>
+    <button class="btn btn-primary padd" type="button" data-id="cp1-treatment">В корзину</button></div>
+  </div>
+</div><div class="pcard reveal" data-cat="Тело" style="transition-delay:.06s">
+  <div class="pimg" style="background-image:url('https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?w=600&amp;q=80')"></div>
+  <div class="pbody"><div class="pbrand">Illiyoon</div><h3>Лосьон для тела Ceramide Ato Concentrate</h3><div class="pvol">350 мл</div>
+    <div class="prow"><div class="pprice">1 490 ₽</div>
+    <button class="btn btn-primary padd" type="button" data-id="illiyoon-lotion">В корзину</button></div>
+  </div>
+</div><div class="pcard reveal" data-cat="Наборы" style="transition-delay:.12s">
+  <div class="pimg" style="background-image:url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600&amp;q=80')"><span class="pbadge">Выгодно</span></div>
+  <div class="pbody"><div class="pbrand">Koreana</div><h3>Подарочный набор «Глоу-рутина»: тонер + эссенция + крем</h3>
+    <div class="prow"><div class="pprice">3 990 ₽<s>4 570 ₽</s></div>
+    <button class="btn btn-primary padd" type="button" data-id="set-glow">В корзину</button></div>
+  </div>
+</div><div class="pcard reveal" data-cat="Наборы" style="transition-delay:.18s">
+  <div class="pimg" style="background-image:url('https://images.unsplash.com/photo-1571875257727-256c39da42af?w=600&amp;q=80')"></div>
+  <div class="pbody"><div class="pbrand">Koreana</div><h3>Набор мини-форматов «Знакомство с k-beauty»</h3>
+    <div class="prow"><div class="pprice">2 490 ₽</div>
+    <button class="btn btn-primary padd" type="button" data-id="set-mini">В корзину</button></div>
+  </div>
+</div></div>
+    <p class="catalog-note">Демо-каталог: товары и цены — примеры для презентации, не прайс магазина. В рабочей версии — реальный ассортимент с остатками по двум магазинам.</p>
+  </div>
+</section>
+<section class="section why" id="why" style="background-image:linear-gradient(120deg,rgba(var(--navy-rgb),.96),rgba(var(--navy-rgb),.7)),url('https://images.unsplash.com/photo-1515688594390-b649af70d282?w=1400&amp;q=80');">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow" style="background:rgba(var(--teal-rgb),.18);color:var(--teal-2)">Почему выбирают Koreana</span>
+      <h2 class="title" style="color:#fff">Здесь подберут, а не просто продадут</h2>
+      <p class="lead">Разница между Wildberries и Koreana — живой консультант, который знает состав и вашу кожу.</p>
+    </div>
+    <div class="why-grid"><div class="wcard reveal"><div class="ico">💁</div><div><h3>Консультант, который знает состав</h3><p>Не просто продавец — разберётся в ингредиентах, расскажет, что подойдёт при акне или чувствительной коже. Именно это ценят покупательницы в отзывах.</p></div></div><div class="wcard reveal" style="transition-delay:.07s"><div class="ico">🇰🇷</div><div><h3>Только оригинал — без риска подделки</h3><p>Весь товар — сертифицированная продукция. Не угадываете по фото на маркетплейсе: видите, берёте, нюхаете вживую.</p></div></div><div class="wcard reveal" style="transition-delay:.14s"><div class="ico">🏪</div><div><h3>Два магазина — удобно с любой части города</h3><p>ул. Ленина, 247Б (1 этаж) и ул. Клыкова, 7. Оба в центре Элисты — зайти по пути.</p></div></div><div class="wcard reveal" style="transition-delay:.21s"><div class="ico">✨</div><div><h3>Актуальные k-beauty тренды</h3><p>Следим за новинками, популярными у beauty-блогеров. В ассортименте — то, что сейчас на пике корейской бьюти-индустрии.</p></div></div></div>
+  </div>
+</section>
+<section class="section" id="reviews" style="background:var(--bg)">
+  <div class="wrap">
+    <div class="rev-head">
+      <div class="reveal">
+        <span class="eyebrow">Отзывы</span>
+        <h2 class="title">Что говорят покупательницы</h2>
+        <p class="lead">Реальный отзыв с Яндекс.Карт. Всего 6 оценок — магазин только набирает репутацию онлайн.</p>
+      </div>
+      <div class="rating-box reveal">
+        <div class="big">4.0</div>
+        <div><div class="stars" style="font-size:16px">★★★★☆</div><div style="font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:4px">6 отзывов</div></div>
+      </div>
+    </div>
+    <div class="grid-reviews"><div class="rev reveal"><div class="q">“</div><div class="stars">★★★★★</div><p>Уход для лица покупаю всегда только там! Консультанты большие молодцы, всегда все подскажут и посоветуют, очень рекомендую!</p><div class="who"><div class="av">К</div><div><b>Кристина У.</b><span>Яндекс.Карты</span></div></div></div></div>
+  </div>
+</section>
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="reveal center-head">
+      <span class="eyebrow">Вопросы</span>
+      <h2 class="title">Частые вопросы</h2>
+    </div>
+    <div class="faq"><details class="qa reveal" open><summary>Как узнать, есть ли нужный бренд в наличии?<span class="plus">+</span></summary><p>Напишите через форму на сайте, позвоните 8 (937) 467-20-20 или напишите в Instagram @koreana_cosmetic. Уточним наличие или привезём под заказ.</p></details><details class="qa reveal"><summary>Чем вы отличаетесь от Wildberries или интернет-магазина?<span class="plus">+</span></summary><p>Живой консультант, который разбирается в составе и поможет выбрать под ваш тип кожи. Плюс вы видите и нюхаете товар вживую — никаких сюрпризов при получении.</p></details><details class="qa reveal"><summary>Как подобрать косметику для чувствительной или проблемной кожи?<span class="plus">+</span></summary><p>Приходите в магазин — расскажите о своей коже, консультант подберёт варианты. Или опишите проблему в форме на сайте — ответим с рекомендациями.</p></details><details class="qa reveal"><summary>Можно собрать подарочный набор под бюджет?<span class="plus">+</span></summary><p>Да. Скажите сумму и кому подарок — поможем составить набор из актуальных позиций. Можно уточнить через форму или при визите.</p></details><details class="qa reveal"><summary>Вы работаете каждый день?<span class="plus">+</span></summary><p>Да, оба магазина открыты ежедневно с 10:00 до 20:00 без выходных.</p></details><details class="qa reveal"><summary>Есть ли доставка по Элисте?<span class="plus">+</span></summary><p>Уточняйте актуальные условия по телефону или в Instagram @koreana_cosmetic — возможности доставки уточним лично.</p></details></div>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <h2>Не знаете, с чего начать уход?</h2>
+      <p>Опишите задачу в форме — подберём средство или набор именно под вас.</p>
+      <a href="#booking" class="btn btn-lg">Подобрать косметику</a>
+    </div>
+  </div>
+</section>
+<section class="section" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="reveal center-head">
+      <span class="eyebrow">Как нас найти</span>
+      <h2 class="title">Два магазина в Элисте</h2>
+      <p class="lead" style="text-align:center">ул. Ленина, 247Б (1 этаж) и ул. Клыкова, 7. Работаем ежедневно 10:00–20:00.</p>
+    </div>
+    <div class="map-wrap reveal">
+      <div class="map-info">
+        <h3>Контакты</h3>
+        <div class="row"><span class="ic">📍</span><div><b>Адрес</b><span>г. Элиста, ул. В.И. Ленина, 247Б (1 эт.) · ул. Ю. Клыкова, 7</span></div></div>
+        <div class="row"><span class="ic">📞</span><div><b>Телефоны</b><span><a href="tel:+79374672020">8 (937) 467-20-20</a></span></div></div>
+        <div class="row"><span class="ic">🕒</span><div><b>Часы работы</b><span>Ежедневно 10:00–20:00</span></div></div>
+        <div class="row"><span class="ic">💬</span><div><b>Онлайн</b><span>запись на сайте</span></div></div>
+        <div style="margin-top:24px"><a href="#booking" class="btn btn-primary" style="width:100%;justify-content:center">Записаться</a></div>
+      </div>
+      <div class="map-frame">
+        <iframe loading="lazy" title="На карте" src="https://yandex.ru/map-widget/v1/?mode=search&text=Koreana%20%D0%BA%D0%BE%D1%80%D0%B5%D0%B9%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BA%D0%BE%D1%81%D0%BC%D0%B5%D1%82%D0%B8%D0%BA%D0%B0%20%D0%AD%D0%BB%D0%B8%D1%81%D1%82%D0%B0%20%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%B0%20247&z=16"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+<footer id="contacts">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#" class="logo"><span class="mark">🌸</span> Koreana</a>
+        <p style="max-width:300px">Магазин оригинальной корейской косметики в Элисте. Профессиональная консультация по составу, уход за лицом, декоративная косметика, парфюмерия.</p>
+        <div style="margin-top:20px"><a href="#booking" class="btn btn-primary">Записаться онлайн</a></div>
+      </div>
+      <div><h4>Контакты</h4><ul><li>📍 г. Элиста, ул. В.И. Ленина, 247Б</li><li>📍 г. Элиста, ул. Ю. Клыкова, 7</li><li>📞 <a href="tel:+79374672020">8 (937) 467-20-20</a></li><li>📸 <a href="https://www.instagram.com/koreana_cosmetic/">@koreana_cosmetic</a></li><li>🕒 Ежедневно 10:00–20:00</li></ul></div><div><h4>Разделы</h4><ul><li><a href="#catalog">Каталог</a></li><li><a href="#why">Почему мы</a></li><li><a href="#reviews">Отзывы</a></li><li><a href="#contacts">Контакты</a></li></ul></div><div><h4>Подобрать косметику</h4><ul><li>Не знаете, что выбрать? Опишите задачу — подберём.</li><li><a href="#booking" class="btn btn-dark" style="margin-top:8px">Написать нам</a></li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Koreana. Демо-макет.</span>
+      <span>Сайт-демо · цены и фото — заглушки, контакты и адреса реальные</span>
+    </div>
+  </div>
+</footer>
+<div class="mobile-cta">
+  <a href="tel:+79374672020" class="btn btn-dark">📞 Позвонить</a>
+  <button class="btn btn-primary" id="mcartOpen" type="button">🛍 Корзина (<span id="mcartCount">0</span>)</button>
+</div>
+<div class="shop-overlay" id="shopOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-label="Корзина">
+  <div class="cart-head"><h3>Корзина</h3><button class="cart-x" id="cartClose" aria-label="Закрыть">✕</button></div>
+  <div class="cart-view" id="cartView">
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-empty" id="cartEmpty"><span>Пока пусто. Загляните в каталог — начните с ухода или подарочного набора.</span><button class="btn btn-primary" id="goCatalog" type="button">Открыть каталог</button></div>
+    <div class="cart-foot" id="cartFoot">
+      <div class="cart-total"><span>Итого</span><b id="cartTotal"></b></div>
+      <button class="btn btn-primary" id="toCheckout" type="button">Оформить заказ</button>
+      <p class="form-note">Оплата при получении — в магазине или курьеру</p>
+    </div>
+  </div>
+  <form class="cart-checkout" id="checkoutForm">
+    <button class="cart-back" id="coBack" type="button">← Назад в корзину</button>
+    <div class="field"><label for="coname">Ваше имя</label><input id="coname" type="text" placeholder="Как к вам обращаться" required></div>
+    <div class="field"><label for="cophone">Телефон</label><input id="cophone" type="tel" inputmode="tel" placeholder="+7 (___) ___-__-__" required></div>
+    <div class="field"><label for="coway">Как получить заказ</label><select id="coway"><option>Самовывоз — ул. В.И. Ленина, 247Б</option><option>Самовывоз — ул. Ю. Клыкова, 7</option><option>Доставка по Элисте (условия уточнит менеджер)</option></select></div>
+    <div class="co-total"><span>К оплате при получении</span><b id="coTotal"></b></div>
+    <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center">Подтвердить заказ</button>
+    <p class="form-note">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</p>
+  </form>
+  <div class="cart-ok" id="cartOk">
+    <div class="ico">✓</div>
+    <h4>Заказ принят!</h4>
+    <p>Это демо — заказ никуда не отправился. В рабочей версии он мгновенно уходит менеджеру в Telegram, а вы получаете подтверждение, когда заказ собран.</p>
+  </div>
+</aside>
+<script>
+  var hdr=document.getElementById('hdr');
+  var onScroll=function(){hdr.classList.toggle('scrolled',window.scrollY>30)};
+  onScroll();addEventListener('scroll',onScroll,{passive:true});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  document.querySelectorAll('input[type=tel]').forEach(function(phone){phone.addEventListener('input',function(e){
+    var v=e.target.value.replace(/\D/g,'').slice(0,11);
+    if(v.startsWith('8'))v='7'+v.slice(1);
+    if(v&&!v.startsWith('7'))v='7'+v;
+    var out='+7';
+    if(v.length>1)out+=' ('+v.slice(1,4);
+    if(v.length>=5)out+=') '+v.slice(4,7);
+    if(v.length>=8)out+='-'+v.slice(7,9);
+    if(v.length>=10)out+='-'+v.slice(9,11);
+    e.target.value=out;
+  });});
+  var bf=document.getElementById('bookForm');
+  if(bf){bf.addEventListener('submit',function(e){e.preventDefault();bf.style.display='none';document.getElementById('bookOk').style.display='block';});}
+  var ba=document.getElementById('ba'),range=document.getElementById('baRange');
+  if(ba&&range){var setPos=function(v){ba.style.setProperty('--pos',v+'%')};range.addEventListener('input',function(e){setPos(e.target.value)});setPos(50);}
+  var sprog=document.getElementById('sprog');
+  if(sprog){var up=function(){var h=document.documentElement,m=h.scrollHeight-h.clientHeight;sprog.style.width=(m>0?h.scrollTop/m*100:0)+'%'};addEventListener('scroll',up,{passive:true});up();}
+  var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fx=document.querySelector('.hero .fx');
+  if(fx&&!rm&&matchMedia('(pointer: fine)').matches){addEventListener('mousemove',function(e){
+    var x=(e.clientX/innerWidth-.5)*28,y=(e.clientY/innerHeight-.5)*18;
+    fx.style.transform='translate('+x+'px,'+y+'px)';
+  },{passive:true});}
+  function countUp(el){
+    var node=el.firstChild;
+    if(!node||node.nodeType!==3)return;
+    var m=node.nodeValue.match(/^(\D*?)((?:\d[\d\s ]*)(?:[.,]\d+)?)(.*)$/);
+    if(!m)return;
+    var dec=(m[2].match(/[.,](\d+)/)||['',''])[1].length;
+    var sep=m[2].indexOf(',')>-1?',':'.';
+    var grp=/[\s ]/.test(m[2]);
+    var target=parseFloat(m[2].replace(/[\s ]/g,'').replace(',','.'));
+    if(!isFinite(target))return;
+    var t0=null,dur=1300;
+    function fmt(v){var s=v.toFixed(dec);if(sep===',')s=s.replace('.',',');if(grp)s=s.replace(/\B(?=(\d{3})+(?!\d))/g,' ');return s;}
+    function tick(ts){
+      if(!t0)t0=ts;
+      var p=Math.min((ts-t0)/dur,1),e=1-Math.pow(1-p,3);
+      node.nodeValue=m[1]+fmt(target*e)+m[3];
+      if(p<1)requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+  var statsBox=document.querySelector('.stats');
+  if(statsBox&&!rm){
+    var sio=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){sio.unobserve(e.target);e.target.querySelectorAll('.stat .num').forEach(countUp);}
+    })},{threshold:.4});
+    sio.observe(statsBox);
+  }
+</script><script>
+(function(){
+  var P={"snail-essence": {"n": "Эссенция с муцином улитки Advanced Snail 96", "p": 1690, "i": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&q=80"}, "boj-sun": {"n": "Солнцезащитный крем Relief Sun SPF50+ PA++++", "p": 1390, "i": "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&q=80"}, "anua-toner": {"n": "Успокаивающий тонер Heartleaf 77%", "p": 1790, "i": "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=600&q=80"}, "mixsoon-bean": {"n": "Эссенция для мягкого пилинга Bean Essence", "p": 1990, "i": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&q=80"}, "romand-tint": {"n": "Стойкий тинт для губ Juicy Lasting Tint", "p": 950, "i": "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=600&q=80"}, "clio-cushion": {"n": "Кушон Kill Cover The New Founwear", "p": 2290, "i": "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=600&q=80"}, "wdressroom": {"n": "Аромаспрей Dress & Living Clear №97", "p": 1290, "i": "https://images.unsplash.com/photo-1594035910387-fea47794261f?w=600&q=80"}, "masil-mask": {"n": "Маска для волос 8 Seconds Salon Hair Mask", "p": 1190, "i": "https://images.unsplash.com/photo-1526947425960-945c6e72858f?w=600&q=80"}, "cp1-treatment": {"n": "Протеиновая маска CP-1 Premium Treatment", "p": 890, "i": "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=600&q=80"}, "illiyoon-lotion": {"n": "Лосьон для тела Ceramide Ato Concentrate", "p": 1490, "i": "https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?w=600&q=80"}, "set-glow": {"n": "Подарочный набор «Глоу-рутина»: тонер + эссенция + крем", "p": 3990, "i": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600&q=80"}, "set-mini": {"n": "Набор мини-форматов «Знакомство с k-beauty»", "p": 2490, "i": "https://images.unsplash.com/photo-1571875257727-256c39da42af?w=600&q=80"}},CUR="₽",KEY='cart_' + "koreana";
+  var cart={};try{cart=JSON.parse(localStorage.getItem(KEY)||'{}')||{}}catch(e){cart={}}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(cart))}catch(e){}}
+  function money(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,'\u202f')+' '+CUR}
+  function $(id){return document.getElementById(id)}
+  var drawer=$('cartDrawer'),ov=$('shopOverlay');
+  function count(){var c=0,k;for(k in cart)c+=cart[k];var el=$('cartCount');if(el)el.textContent=c;var m=$('mcartCount');if(m)m.textContent=c}
+  function total(){var t=0,k;for(k in cart)if(P[k])t+=P[k].p*cart[k];return t}
+  function view(name){
+    $('cartView').style.display=name==='items'?'flex':'none';
+    $('checkoutForm').style.display=name==='form'?'flex':'none';
+    $('cartOk').style.display=name==='ok'?'flex':'none';
+  }
+  function render(){
+    var html='',n=0,k;
+    for(k in cart){var p=P[k];if(!p)continue;n++;
+      html+='<div class="cart-row" data-id="'+k+'"><div class="th" style="background-image:url(\''+p.i+'\')"></div><div><div class="nm">'+p.n+'</div><div class="pr">'+money(p.p)+'</div></div><div class="qty"><button type="button" data-act="dec" aria-label="Меньше">−</button><b>'+cart[k]+'</b><button type="button" data-act="inc" aria-label="Больше">+</button></div><button type="button" class="cart-rm" data-act="rm" aria-label="Убрать">✕</button></div>';
+    }
+    $('cartItems').innerHTML=html;
+    $('cartEmpty').style.display=n?'none':'flex';
+    $('cartFoot').style.display=n?'block':'none';
+    $('cartTotal').textContent=money(total());
+  }
+  function open(){render();view('items');drawer.classList.add('open');ov.classList.add('on');document.body.style.overflow='hidden'}
+  function close(){drawer.classList.remove('open');ov.classList.remove('on');document.body.style.overflow=''}
+  var b1=$('cartOpen');if(b1)b1.addEventListener('click',open);
+  var b2=$('mcartOpen');if(b2)b2.addEventListener('click',open);
+  $('cartClose').addEventListener('click',close);
+  ov.addEventListener('click',close);
+  $('goCatalog').addEventListener('click',function(){close();var c=$('catalog');if(c)c.scrollIntoView({behavior:'smooth'})});
+  addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+  document.querySelectorAll('.padd').forEach(function(b){b.addEventListener('click',function(){
+    var id=b.getAttribute('data-id');cart[id]=(cart[id]||0)+1;save();count();
+    b.classList.add('added');b.textContent='Добавлено ✓';
+    setTimeout(function(){b.classList.remove('added');b.textContent='В корзину'},1200);
+  })});
+  $('cartItems').addEventListener('click',function(e){
+    var btn=e.target.closest('button');if(!btn)return;
+    var row=e.target.closest('.cart-row');if(!row)return;
+    var id=row.getAttribute('data-id'),act=btn.getAttribute('data-act');
+    if(act==='inc')cart[id]++;
+    if(act==='dec'){cart[id]--;if(cart[id]<1)delete cart[id]}
+    if(act==='rm')delete cart[id];
+    save();count();render();
+  });
+  $('toCheckout').addEventListener('click',function(){$('coTotal').textContent=money(total());view('form')});
+  $('coBack').addEventListener('click',function(){view('items')});
+  $('checkoutForm').addEventListener('submit',function(e){e.preventDefault();cart={};save();count();view('ok')});
+  var chips=document.querySelectorAll('.chip');
+  chips.forEach(function(ch){ch.addEventListener('click',function(){
+    chips.forEach(function(c){c.classList.remove('active')});ch.classList.add('active');
+    var cat=ch.getAttribute('data-cat');
+    document.querySelectorAll('.pcard').forEach(function(card){
+      card.style.display=(cat==='*'||card.getAttribute('data-cat')===cat)?'':'none';
+    });
+  })});
+  count();
+})();
+</script>
+</body>
+</html>
