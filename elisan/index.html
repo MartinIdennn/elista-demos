@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ЭлиСан — гостиница в центре Элисты | Прямое бронирование без комиссии</title>
+<meta name="description" content="Гостиница ЭлиСан в Элисте — рейтинг 9.9/10 на Островок, 550 м до центра. Стандарт и Делюкс, бесплатный Wi-Fi и парковка. Бронируйте напрямую — без наценки агрегатора.">
+<meta name="keywords" content="гостиница Элиста, отель ЭлиСан, EliSun Hotel, забронировать номер Элиста, гостиница Селгикова, отель центр Элисты, прямое бронирование">
+<meta property="og:title" content="ЭлиСан — солнечная гостиница в центре Элисты">
+<meta property="og:description" content="Рейтинг 9.9/10 на Островок. Прямое бронирование без комиссии агрегатора.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://martinidennn.github.io/elista-demos/elisan/img/photo-1.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;0,700;1,500;1,600&family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --coal:#191B1E; --graphite:#24272B;
+  --bg:#F5F4F1; --line:#E3E1DC; --ink:#22252A; --mut:#6A6E74;
+  --emerald:#14584A; --emerald-2:#2E7A66;
+  --brass:#C9A86B; --moon:#EFF4F6;
+  --on-dark-mut:#A7AEB4;
+  --display:'Lora',Georgia,serif; --body:'Rubik',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);font-weight:400;font-size:16px;line-height:1.7;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+::selection{background:var(--emerald);color:var(--moon)}
+.wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.12}
+h1 em,h2 em{font-family:var(--display);font-style:italic;font-weight:600;color:var(--brass)}
+.section h2 em{color:var(--emerald)}
+.kicker{display:inline-flex;align-items:center;gap:12px;font-size:12.5px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--brass)}
+.kicker::before{content:"";width:30px;height:1px;flex:0 0 auto;background:var(--brass)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--body);font-weight:600;font-size:15px;line-height:1;cursor:pointer;padding:17px 32px;border-radius:2px;border:1px solid transparent;letter-spacing:.02em;transition:background .25s,color .25s,border-color .25s,transform .25s,box-shadow .25s}
+.btn-main{background:var(--emerald);color:var(--moon);box-shadow:0 12px 28px rgba(20,88,74,.28)}
+.btn-main:hover{background:var(--emerald-2);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:#C9C6BF}
+.btn-ghost:hover{border-color:var(--emerald);color:var(--emerald)}
+.btn-ghost.on-dark{color:var(--moon);border-color:rgba(239,244,246,.4)}
+.btn-ghost.on-dark:hover{border-color:var(--brass);color:var(--brass)}
+.btn:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,button:focus-visible{outline:3px solid var(--emerald-2);outline-offset:2px}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* сигнатура 1: светящаяся вывеска — лунное свечение словознака */
+.glow{color:var(--moon);text-shadow:0 0 14px rgba(239,244,246,.45),0 0 42px rgba(239,244,246,.2)}
+@keyframes signGlow{
+  0%,100%{text-shadow:0 0 14px rgba(239,244,246,.45),0 0 42px rgba(239,244,246,.2)}
+  50%{text-shadow:0 0 20px rgba(239,244,246,.62),0 0 58px rgba(201,168,107,.24)}
+}
+.hero h1.glow{animation:signGlow 5.5s ease-in-out infinite}
+
+/* сигнатура 2: мотив деревянных реек (стеновые панели) */
+.slats-dark{background-image:repeating-linear-gradient(90deg,rgba(239,244,246,.035) 0 10px,transparent 10px 26px)}
+.slats-light{background-image:repeating-linear-gradient(90deg,rgba(201,168,107,.22) 0 6px,transparent 6px 18px)}
+
+/* разделитель — тонкая латунная линия */
+.brass-rule{height:1px;background:linear-gradient(90deg,transparent 0%,var(--brass) 22%,var(--brass) 78%,transparent 100%);opacity:.7}
+
+/* строгая прямоугольная рамка с латунным кантом */
+.frame{position:relative;overflow:hidden;border:1px solid var(--brass);background:var(--graphite);border-radius:2px}
+.frame img{width:100%;height:100%;object-fit:cover}
+
+/* демо-плашка */
+.demo-note{background:var(--coal);color:var(--on-dark-mut);font-size:12.5px;line-height:1.5;text-align:center;padding:8px 18px;border-bottom:1px solid rgba(201,168,107,.25)}
+.demo-note b{color:var(--brass);font-weight:500}
+
+/* шапка */
+header{position:sticky;top:0;z-index:60;background:rgba(25,27,30,.92);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s}
+header.scrolled{border-bottom-color:rgba(201,168,107,.3);box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.head-in{display:flex;align-items:center;justify-content:space-between;gap:20px;height:74px}
+.logo{display:flex;align-items:center;gap:13px;line-height:1.1}
+.logo .mono{width:36px;height:36px;flex:0 0 auto;display:grid;place-items:center;border:1px solid var(--brass);border-radius:2px;font-family:var(--display);font-style:italic;font-weight:600;font-size:19px;color:var(--brass)}
+.logo .word{font-family:var(--display);font-weight:700;font-size:23px;letter-spacing:.04em}
+.logo .word i{font-style:italic;font-weight:600}
+.logo .place{display:block;font-size:10.5px;font-weight:500;letter-spacing:.26em;text-transform:uppercase;color:var(--brass)}
+nav.menu{display:flex;gap:24px}
+nav.menu a{font-size:14px;font-weight:500;color:var(--moon);padding:6px 2px;border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
+nav.menu a:hover{color:var(--brass);border-bottom-color:var(--brass)}
+.head-right{display:flex;align-items:center;gap:16px}
+.head-phone{font-size:13px;font-weight:400;color:var(--on-dark-mut)}
+.head-right .btn{padding:13px 24px;font-size:14px}
+
+/* hero: ночной фасад */
+.hero{position:relative;background:var(--coal);color:var(--moon);overflow:hidden}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 38%}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(25,27,30,.94) 0%,rgba(25,27,30,.78) 42%,rgba(25,27,30,.42) 75%,rgba(25,27,30,.55) 100%),linear-gradient(180deg,rgba(25,27,30,.55) 0%,rgba(25,27,30,.1) 35%,rgba(25,27,30,.82) 100%)}
+.hero-in{position:relative;z-index:1;padding:120px 0 130px;max-width:660px}
+.badges{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+.badges span{font-size:13px;font-weight:500;background:rgba(36,39,43,.72);border:1px solid rgba(201,168,107,.4);color:var(--moon);padding:8px 16px;border-radius:2px;backdrop-filter:blur(4px)}
+.hero h1{font-size:clamp(34px,5.4vw,62px);letter-spacing:-.01em}
+.hero .sub{font-size:17px;color:#CFD6DA;max-width:540px;margin-top:24px}
+.hero .sub b{color:var(--moon);font-weight:600}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.hero-trust{margin-top:30px;font-size:13.5px;color:var(--on-dark-mut)}
+.hero-trust b{color:var(--brass);font-weight:600}
+.hero-card{position:absolute;z-index:1;right:max(22px,calc((100% - 1096px)/2));bottom:54px;background:rgba(36,39,43,.86);border:1px solid var(--brass);border-radius:2px;padding:18px 26px;backdrop-filter:blur(6px)}
+.hero-card .num{font-family:var(--display);font-weight:700;font-size:34px;color:var(--moon);line-height:1}
+.hero-card .num small{font-size:16px;color:var(--brass);font-weight:600}
+.hero-card .lbl{font-size:12px;color:var(--on-dark-mut);margin-top:5px}
+
+/* полоса фактов — графит и рейки */
+.factband{background:var(--coal);color:var(--moon);padding:50px 0;border-top:1px solid rgba(201,168,107,.3);border-bottom:1px solid rgba(201,168,107,.3)}
+.factband-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;text-align:center}
+.fact{padding:4px 10px}
+.fact + .fact{border-left:1px solid rgba(201,168,107,.25)}
+.fact .num{font-family:var(--display);font-weight:700;font-size:44px;line-height:1}
+.fact .num small{font-size:20px;font-weight:600;color:var(--brass)}
+.fact .lbl{font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;margin-top:10px;color:var(--on-dark-mut)}
+
+/* секции */
+.section{padding:104px 0}
+.sec-head{max-width:640px;margin-bottom:54px}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.sec-head.center .kicker{justify-content:center}
+.sec-head.center .kicker::after{content:"";width:30px;height:1px;flex:0 0 auto;background:var(--brass)}
+.sec-head h2{font-size:clamp(28px,4vw,46px);margin-top:18px}
+.sec-head .lead{font-size:16px;color:var(--mut);margin-top:16px}
+
+/* номера */
+.rooms-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.room-card{background:#FFFFFF;border:1px solid var(--line);border-radius:2px;padding:14px 14px 28px;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
+.room-card:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(34,37,42,.12)}
+.room-card .frame{aspect-ratio:4/3}
+.room-card .frame.tint{display:grid;place-items:center;color:var(--brass);background:var(--graphite)}
+.room-card .frame.tint svg{width:60px;height:60px}
+.room-body{padding:24px 12px 0;display:flex;flex-direction:column;flex:1}
+.room-body .cnt{font-size:11.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--brass)}
+.room-body h3{font-size:25px;margin-top:8px}
+.room-body p{font-size:14.5px;color:var(--mut);margin-top:10px;flex:1}
+.room-price{display:flex;align-items:baseline;gap:10px;margin-top:20px;padding-top:16px;border-top:1px solid var(--line)}
+.room-price b{font-family:var(--display);font-style:italic;font-size:21px;font-weight:600;color:var(--emerald)}
+.room-price span{font-size:12.5px;color:var(--mut)}
+.room-body .btn{margin-top:20px;align-self:flex-start;padding:14px 26px;font-size:14px}
+.rooms-note{text-align:center;font-size:13.5px;color:var(--mut);margin-top:38px}
+
+/* галерея интерьеров — тёмная секция */
+.gallery{background:var(--coal);color:var(--moon)}
+.gallery .sec-head .lead{color:var(--on-dark-mut)}
+.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-flow:dense;gap:24px}
+.gal-item{margin:0}
+.gal-item .frame{height:360px;border-color:rgba(201,168,107,.65)}
+.gal-item.wide{grid-column:span 2}
+.gal-item figcaption{font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin-top:12px}
+
+/* почему мы */
+.why{background:var(--bg)}
+.why-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:52px;align-items:stretch}
+.why-ph{position:relative;padding:0 0 18px 18px}
+.why-ph::before{content:"";position:absolute;left:0;bottom:0;width:62%;height:46%;border-radius:2px}
+.why-ph::before{background-image:repeating-linear-gradient(90deg,rgba(201,168,107,.28) 0 6px,transparent 6px 18px)}
+.why-ph .frame{position:relative;height:100%;min-height:480px;box-shadow:0 26px 54px rgba(34,37,42,.16)}
+.why-cards{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-content:center}
+.why-card{background:#FFFFFF;border:1px solid var(--line);border-radius:2px;padding:28px 26px;transition:transform .3s,box-shadow .3s}
+.why-card:hover{transform:translateY(-4px);box-shadow:0 18px 38px rgba(34,37,42,.1)}
+.why-card .ic{width:46px;height:46px;border-radius:2px;background:rgba(20,88,74,.08);color:var(--emerald);display:grid;place-items:center;margin-bottom:16px}
+.why-card .ic svg{width:23px;height:23px}
+.why-card h3{font-size:18.5px}
+.why-card p{font-size:13.5px;color:var(--mut);margin-top:8px}
+
+/* отзывы */
+.rev-rating{display:inline-flex;align-items:center;gap:12px;background:#FFFFFF;border:1px solid var(--line);border-radius:2px;padding:10px 22px;font-size:14px;font-weight:500;margin-top:20px}
+.rev-rating b{font-family:var(--display);font-size:22px;color:var(--emerald)}
+.stars{color:var(--brass);letter-spacing:4px;font-size:15px}
+.rev-hero{max-width:780px;margin:0 auto;text-align:center}
+.rev-hero blockquote{font-family:var(--display);font-style:italic;font-weight:600;font-size:clamp(21px,2.9vw,31px);line-height:1.45;margin-top:24px}
+.rev-hero .who{margin-top:20px;font-size:12.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.rev-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:880px;margin:48px auto 0}
+.rev-card{background:#FFFFFF;border:1px solid var(--line);border-top:2px solid var(--brass);border-radius:2px;padding:28px 30px}
+.rev-card p{font-size:14.5px;color:var(--ink);margin-top:12px}
+.rev-card .who{margin-top:14px;font-size:11.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+.rev-note{text-align:center;font-size:12.5px;color:var(--mut);margin-top:32px}
+
+/* бронирование — тёмная секция */
+.booking{background:var(--graphite);color:var(--moon)}
+.bk-info h2{font-size:clamp(28px,3.6vw,42px);margin-top:18px}
+.bk-info h2 em{color:var(--brass)}
+.bk-info .lead{font-size:16px;color:var(--on-dark-mut);margin-top:16px;max-width:420px}
+.booking-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start}
+.bk-perks{margin-top:28px;display:flex;flex-direction:column;gap:11px}
+.bk-perks div{display:flex;gap:12px;align-items:baseline;font-size:14.5px;color:#CFD6DA}
+.bk-perks span{color:var(--brass);font-weight:600}
+.bk-contacts{margin-top:32px;background:var(--coal);border:1px solid rgba(201,168,107,.35);border-radius:2px;padding:26px 28px}
+.bk-contacts div{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid rgba(239,244,246,.1);font-size:14px}
+.bk-contacts div:last-child{border-bottom:none}
+.bk-contacts span{color:var(--on-dark-mut)}
+.bk-contacts b{font-weight:500;color:var(--moon);text-align:right}
+.bform{background:#FFFFFF;color:var(--ink);border:1px solid var(--brass);border-radius:2px;padding:40px 42px;box-shadow:0 28px 60px rgba(0,0,0,.34);position:relative;overflow:hidden}
+.bform::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--brass) 30%,var(--brass) 70%,transparent)}
+.bform h3{font-size:24px}
+.bform .fsub{font-size:13.5px;color:var(--mut);margin:8px 0 24px}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{margin-bottom:15px}
+.field label{display:block;font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);margin-bottom:7px}
+.field input,.field select{width:100%;padding:13px 15px;border:1px solid var(--line);border-radius:2px;background:var(--bg);font-family:var(--body);font-size:15px;color:var(--ink);transition:border-color .2s,background .2s}
+.field input:focus,.field select:focus{outline:none;border-color:var(--emerald);background:#fff}
+.nights{display:none;font-size:13px;font-weight:500;color:var(--emerald);background:rgba(20,88,74,.07);border:1px dashed rgba(20,88,74,.4);border-radius:2px;padding:9px 14px;margin:-3px 0 15px;text-align:center}
+.nights.on{display:block}
+.bform .btn{width:100%}
+.f-note{font-size:11.5px;color:var(--mut);text-align:center;margin-top:12px}
+.book-ok{display:none;text-align:center;padding:26px 6px}
+.book-ok .ico{width:62px;height:62px;border-radius:50%;background:rgba(20,88,74,.1);color:var(--emerald);display:grid;place-items:center;margin:0 auto 16px;font-size:28px;font-weight:600}
+.book-ok h4{font-family:var(--display);font-size:24px;font-weight:700}
+.book-ok p{font-size:14px;color:var(--mut);margin-top:12px}
+.book-ok p b{color:var(--emerald);font-weight:600}
+.book-ok .demo{font-size:12px;color:var(--mut);margin-top:14px;opacity:.8}
+
+/* карта */
+.map-frame{border:1px solid var(--brass);border-radius:2px;overflow:hidden;background:#FFFFFF;box-shadow:0 22px 48px rgba(34,37,42,.1)}
+.map-frame iframe{width:100%;height:420px;border:0;display:block}
+
+/* футер */
+footer{background:var(--coal);color:var(--on-dark-mut);padding:72px 0 30px;border-top:1px solid rgba(201,168,107,.25)}
+.foot-grid{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:40px}
+footer .word{font-family:var(--display);font-weight:700;font-size:23px;letter-spacing:.04em}
+footer .word i{font-style:italic;font-weight:600}
+footer .about{font-size:14px;margin-top:14px;max-width:300px;line-height:1.8}
+footer h4{font-size:11.5px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--brass);margin-bottom:16px}
+footer ul{list-style:none}
+footer li{font-size:14px;line-height:2.15}
+footer a:hover{color:var(--brass)}
+.foot-bottom{border-top:1px solid rgba(239,244,246,.1);margin-top:48px;padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12px}
+
+/* адаптив */
+@media(max-width:960px){
+  nav.menu,.head-phone{display:none}
+  .hero-in{padding:84px 0 150px}
+  .hero-card{bottom:30px;right:22px;padding:14px 20px}
+  .factband-grid{grid-template-columns:1fr 1fr;gap:32px 18px}
+  .fact + .fact{border-left:none}
+  .rooms-grid{grid-template-columns:1fr 1fr}
+  .gal-grid{grid-template-columns:1fr 1fr}
+  .gal-item .frame{height:300px}
+  .why-grid{grid-template-columns:1fr}
+  .why-ph .frame{min-height:420px}
+  .booking-grid,.rev-grid{grid-template-columns:1fr}
+  .section{padding:72px 0}
+}
+@media(max-width:640px){
+  .rooms-grid,.why-cards,.foot-grid{grid-template-columns:1fr}
+  .f-row{grid-template-columns:1fr}
+  .bform{padding:28px 20px}
+  .hero h1{font-size:clamp(30px,8.8vw,38px)}
+  .hero-in{padding:64px 0 140px}
+  .hero-card{padding:11px 15px;bottom:22px}
+  .wrap{padding:0 18px}
+  .head-in{height:66px}
+  .head-right .btn{padding:11px 16px;font-size:13px}
+  .logo .word{font-size:20px}
+  .logo .mono{width:32px;height:32px;font-size:17px}
+  .factband-grid{gap:26px 12px}
+  .fact .num{font-size:34px}
+}
+@media(max-width:480px){
+  .gal-grid{grid-template-columns:1fr}
+  .gal-item.wide{grid-column:auto}
+  .gal-item .frame{height:280px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{transition:none;opacity:1;transform:none}
+  .hero h1.glow{animation:none}
+  .btn,.room-card,.why-card{transition:none}
+  .room-card:hover,.why-card:hover,.btn-main:hover{transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="demo-note"><b>DEMO-макет</b> для гостиницы «ЭлиСан» · адрес и рейтинг 9.9 — реальные (Островок) · телефон и цены номеров уточняются · тексты отзывов — по темам оценок агрегатора · <b>фотографии — реальные</b> (из открытых галерей сервисов бронирования)</div>
+
+<header id="hdr">
+  <div class="wrap head-in">
+    <a class="logo" href="#" aria-label="ЭлиСан — на главную">
+      <span class="mono" aria-hidden="true">E</span>
+      <span><span class="word glow">Eli<i>Sun</i></span><span class="place">Hotel · Элиста</span></span>
+    </a>
+    <nav class="menu" aria-label="Основная навигация">
+      <a href="#rooms">Номера</a>
+      <a href="#gallery">Интерьеры</a>
+      <a href="#why">Почему мы</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#booking">Бронирование</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <div class="head-right">
+      <span class="head-phone">телефон уточняется</span>
+      <a class="btn btn-main" href="#booking">Забронировать</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true"><img src="img/photo-1.jpg" alt="" loading="eager"></div>
+  <div class="wrap">
+    <div class="hero-in">
+      <div class="badges reveal">
+        <span>9.9 / 10 — Островок</span>
+        <span>Чистота 10 · Сервис 10</span>
+        <span>550 м до центра</span>
+      </div>
+      <h1 class="glow reveal">Солнечная гостиница в центре Элисты — <em>бронируйте напрямую</em></h1>
+      <p class="sub reveal">Рейтинг 9.9 на Островок, бесплатные Wi-Fi и парковка, пешком до Золотых ворот и Пагоды Семи Дней. <b>Прямая бронь — без комиссии агрегатора.</b></p>
+      <div class="hero-cta reveal">
+        <a class="btn btn-main" href="#rooms">Выбрать номер</a>
+        <a class="btn btn-ghost on-dark" href="#booking">Забронировать</a>
+      </div>
+      <p class="hero-trust reveal">5 отзывов · средний рейтинг <b>9.9</b> · Островок</p>
+    </div>
+  </div>
+  <div class="hero-card reveal">
+    <div class="num">9.9<small>/10</small></div>
+    <div class="lbl">рейтинг гостей · Островок</div>
+  </div>
+</section>
+
+<div class="factband slats-dark">
+  <div class="wrap factband-grid reveal">
+    <div class="fact"><div class="num">9.9<small>/10</small></div><div class="lbl">Рейтинг на Островок</div></div>
+    <div class="fact"><div class="num">10<small>/10</small></div><div class="lbl">Чистота и сервис</div></div>
+    <div class="fact"><div class="num">550<small> м</small></div><div class="lbl">До главной площади</div></div>
+    <div class="fact"><div class="num">0<small> ₽</small></div><div class="lbl">Комиссия при прямой брони</div></div>
+  </div>
+</div>
+
+<section class="section" id="rooms">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Номера</span>
+      <h2>Выберите <em>свой</em> номер</h2>
+      <p class="lead">16 номеров двух категорий. Цены уточняйте по телефону или в форме бронирования.</p>
+    </div>
+    <div class="rooms-grid">
+      <article class="room-card reveal">
+        <div class="frame"><img src="img/photo-5.jpg" alt="Номер Стандарт — кровать, деревянная стеновая панель и мансардные окна" loading="lazy"></div>
+        <div class="room-body">
+          <span class="cnt">12 номеров</span>
+          <h3>Стандарт</h3>
+          <p>Уютный номер с ТВ, кондиционером, Wi-Fi и собственной ванной комнатой. Таких номеров 12 — есть в любой день недели.</p>
+          <div class="room-price"><b>по запросу</b><span>цену подтвердим при брони</span></div>
+          <button type="button" class="btn btn-main room-pick" data-cat="Стандарт">Забронировать</button>
+        </div>
+      </article>
+      <article class="room-card reveal">
+        <div class="frame"><img src="img/photo-9.jpg" alt="Гостиная номера Делюкс — зеркало с золотой подсветкой, диван и деревянные панели" loading="lazy"></div>
+        <div class="room-body">
+          <span class="cnt">Всего 4 номера</span>
+          <h3>Делюкс</h3>
+          <p>Просторный номер повышенной категории с улучшенной обстановкой и расширенным набором удобств. Всего 4 номера — бронируйте заранее.</p>
+          <div class="room-price"><b>по запросу</b><span>цену подтвердим при брони</span></div>
+          <button type="button" class="btn btn-main room-pick" data-cat="Делюкс">Забронировать</button>
+        </div>
+      </article>
+      <article class="room-card reveal">
+        <div class="frame tint" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg>
+        </div>
+        <div class="room-body">
+          <span class="cnt">По запросу</span>
+          <h3>Ранний заезд / поздний выезд</h3>
+          <p>Приезжаете рано утром или уезжаете вечером? Напишите в заявке — постараемся подстроиться под ваш маршрут.</p>
+          <div class="room-price"><b>по запросу</b><span>уточним при бронировании</span></div>
+          <a class="btn btn-ghost" href="#booking">Указать в заявке</a>
+        </div>
+      </article>
+    </div>
+    <p class="rooms-note">Стандартное время: заезд с 14:00, выезд до 12:00. Бронируя напрямую, вы не платите комиссию посредников.</p>
+  </div>
+</section>
+
+<section class="section gallery slats-dark" id="gallery">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Интерьеры</span>
+      <h2>Дерево, бархат и <em>мягкий свет</em></h2>
+      <p class="lead">Реальные интерьеры отеля — фотографии из открытых галерей сервисов бронирования.</p>
+    </div>
+    <div class="gal-grid">
+      <figure class="gal-item reveal">
+        <div class="frame"><img src="img/photo-6.jpg" alt="Кровать крупным планом — белоснежное бельё и фактурная стена" loading="lazy"></div>
+        <figcaption>Белоснежное бельё</figcaption>
+      </figure>
+      <figure class="gal-item reveal">
+        <div class="frame"><img src="img/photo-7.jpg" alt="Ореховое изголовье кровати, бра и изумрудное бархатное основание" loading="lazy"></div>
+        <figcaption>Орех и изумрудный бархат</figcaption>
+      </figure>
+      <figure class="gal-item reveal">
+        <div class="frame"><img src="img/photo-14.jpg" alt="Обеденный уголок — изумрудные бархатные кресла, мраморный стол, деревянная панель" loading="lazy"></div>
+        <figcaption>Обеденный уголок</figcaption>
+      </figure>
+      <figure class="gal-item wide reveal">
+        <div class="frame"><img src="img/photo-13.jpg" alt="Комната с изумрудным диваном" loading="lazy"></div>
+        <figcaption>Гостиная с изумрудным диваном</figcaption>
+      </figure>
+      <figure class="gal-item reveal">
+        <div class="frame"><img src="img/photo-10.jpg" alt="Графитовый диван — деталь интерьера" loading="lazy"></div>
+        <figcaption>Графитовые детали</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section why" id="why">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Почему ЭлиСан</span>
+      <h2>Маленький отель — <em>большое внимание</em></h2>
+      <p class="lead">Никакой безликой стойки ресепшена: хозяин лично встречает гостей и знает каждого по имени.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-ph reveal">
+        <div class="frame"><img src="img/photo-14.jpg" alt="Обеденный уголок отеля — бархатные кресла и мраморный стол" loading="lazy"></div>
+      </div>
+      <div class="why-cards">
+        <div class="why-card reveal">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6" width="19" height="13" rx="1.5"/><path d="M2.5 10h19"/><path d="M6.5 15h4"/></svg></div>
+          <h3>Прямая бронь — ваша экономия</h3>
+          <p>Агрегаторы берут 15% и выше с каждой ночи. Бронируйте у нас напрямую и платите без наценки посредника.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg></div>
+          <h3>Всё рядом — пешком</h3>
+          <p>Золотые ворота, Пагода Семи Дней, главная площадь — в 5–7 минутах ходьбы. Аэропорт — 7,8 км.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5a14 14 0 0 1 18 0"/><path d="M6.2 13a9.4 9.4 0 0 1 11.6 0"/><path d="M9.4 16.4a4.8 4.8 0 0 1 5.2 0"/><circle cx="12" cy="19.4" r="1.1" fill="currentColor" stroke="none"/></svg></div>
+          <h3>Бесплатный Wi-Fi и парковка</h3>
+          <p>Высокоскоростной интернет и парковочное место включены в стоимость — никаких скрытых доплат.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 11.5 12 4.5l8.5 7"/><path d="M5.5 10v9.5h13V10"/><path d="M10 19.5v-5h4v5"/></svg></div>
+          <h3>Домашняя атмосфера</h3>
+          <p>Аромадиффузоры, чай и кофе в лобби, радушный хозяин. Гости ставят сервис 10 из 10 на Островок.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="brass-rule" aria-hidden="true"></div></div>
+
+<section class="section" id="reviews">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="kicker">Отзывы гостей</span>
+      <h2>9.9 из 10 — <em>не случайность</em></h2>
+      <div><span class="rev-rating"><b>9.9</b> из 10 · 5 отзывов · Островок</span></div>
+    </div>
+    <div class="rev-hero reveal">
+      <div class="stars" aria-hidden="true">★★★★★</div>
+      <blockquote>«Приятная атмосфера — чувствуется, что хозяин действительно заботится о гостях. Чистое бельё, аромат в лобби. Рекомендую»</blockquote>
+      <div class="who">Гость · Островок</div>
+    </div>
+    <div class="rev-grid">
+      <div class="rev-card reveal">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p>Чисто, уютно, персонал очень приветливый. Расположение идеальное — всё рядом пешком. Буду возвращаться.</p>
+        <div class="who">Гость · Островок</div>
+      </div>
+      <div class="rev-card reveal">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p>Хорошая гостиница в центре. Wi-Fi работает отлично, парковка удобная. Соотношение цены и качества достойное.</p>
+        <div class="who">Гость · Островок</div>
+      </div>
+    </div>
+    <p class="rev-note">Оценки по категориям на Островок: расположение 9.8, чистота 10, номер 10, сервис 10. Тексты составлены по темам оценок; в рабочей версии — дословные цитаты гостей.</p>
+  </div>
+</section>
+
+<section class="section booking" id="booking">
+  <div class="wrap booking-grid">
+    <div class="bk-info">
+      <span class="kicker reveal">Прямое бронирование</span>
+      <h2 class="reveal">Забронировать <em>напрямую</em></h2>
+      <p class="lead reveal">Оставьте заявку — администратор подтвердит бронь в течение 15 минут. Без комиссии агрегатора.</p>
+      <div class="bk-perks reveal">
+        <div><span>✓</span>Прямое бронирование — без посредников</div>
+        <div><span>✓</span>Подтверждение за 15 минут</div>
+        <div><span>✓</span>Цена без наценки агрегатора</div>
+      </div>
+      <div class="bk-contacts reveal">
+        <div><span>Адрес</span><b>г. Элиста, ул. Селгикова, 39</b></div>
+        <div><span>Телефон</span><b>уточняется</b></div>
+        <div><span>Заезд / выезд</span><b>с 14:00 / до 12:00</b></div>
+        <div><span>До аэропорта</span><b>7,8 км · 10–15 минут на такси</b></div>
+      </div>
+    </div>
+    <div class="bform reveal">
+      <form id="bookForm" novalidate>
+        <h3>Заявка на бронирование</h3>
+        <p class="fsub">Выберите даты и категорию — остальное возьмём на себя.</p>
+        <div class="f-row">
+          <div class="field"><label for="fin">Заезд</label><input id="fin" type="date" required></div>
+          <div class="field"><label for="fout">Выезд</label><input id="fout" type="date" required></div>
+        </div>
+        <p class="nights" id="fnights"></p>
+        <div class="f-row">
+          <div class="field"><label for="fguests">Гостей</label><select id="fguests"><option>1 гость</option><option selected>2 гостя</option><option>3 гостя</option><option>4 гостя и более</option></select></div>
+          <div class="field"><label for="fcat">Категория номера</label><select id="fcat"><option>Стандарт</option><option>Делюкс</option></select></div>
+        </div>
+        <div class="field"><label for="fname">Ваше имя</label><input id="fname" type="text" placeholder="Как к вам обращаться" required></div>
+        <div class="field"><label for="fphone">Телефон</label><input id="fphone" type="tel" inputmode="tel" placeholder="+7 (___) ___-__-__" required></div>
+        <button type="submit" class="btn btn-main">Забронировать напрямую</button>
+        <p class="f-note">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</p>
+      </form>
+      <div class="book-ok" id="bookOk">
+        <div class="ico" aria-hidden="true">✓</div>
+        <h4>Заявка принята!</h4>
+        <p>В рабочей версии она мгновенно уходит администратору в <b>Telegram</b> — и гость получает подтверждение с деталями заезда. Ни одна бронь не теряется.</p>
+        <p class="demo">Это демо-макет — заявка никуда не отправилась.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contacts">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="kicker">Как нас найти</span>
+      <h2>В самом <em>центре</em> Элисты</h2>
+      <p class="lead">Ул. Селгикова, 39 — 550 м от главной площади, пешком до всех достопримечательностей.</p>
+    </div>
+    <div class="map-frame reveal">
+      <iframe loading="lazy" title="Гостиница ЭлиСан на карте Элисты" src="https://yandex.ru/map-widget/v1/?mode=search&text=%D0%AD%D0%BB%D0%B8%D0%A1%D0%B0%D0%BD%20%D0%B3%D0%BE%D1%81%D1%82%D0%B8%D0%BD%D0%B8%D1%86%D0%B0%20%D0%AD%D0%BB%D0%B8%D1%81%D1%82%D0%B0%20%D0%A1%D0%B5%D0%BB%D0%B3%D0%B8%D0%BA%D0%BE%D0%B2%D0%B0%2039&z=16"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <span class="word glow">Eli<i>Sun</i></span>
+        <p class="about">Уютная гостиница в центре Элисты. Рейтинг 9.9 на Островок. 16 номеров, Wi-Fi, парковка — бесплатно.</p>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <ul>
+          <li>г. Элиста, ул. Селгикова, 39</li>
+          <li>Телефон — уточняется</li>
+          <li>Заезд с 14:00 / выезд до 12:00</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Номера</h4>
+        <ul>
+          <li><a href="#rooms">Стандарт (12 номеров)</a></li>
+          <li><a href="#rooms">Делюкс (4 номера)</a></li>
+          <li><a href="#booking">Забронировать напрямую</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 ЭлиСан. Демо-макет.</span>
+      <span>Сайт-демо · телефон и цены номеров уточняются</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+  var $=function(id){return document.getElementById(id)};
+
+  /* шапка: тень при скролле */
+  var hdr=$('hdr');
+  var onScroll=function(){hdr.classList.toggle('scrolled',window.scrollY>10)};
+  onScroll();
+  addEventListener('scroll',onScroll,{passive:true});
+
+  /* плавное появление секций */
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}
+      });
+    },{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  }else{
+    document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')});
+  }
+
+  /* даты: минимум сегодня, выезд позже заезда, счётчик ночей */
+  var DAY=864e5;
+  var iso=function(d){return d.toISOString().slice(0,10)};
+  var nightsWord=function(n){
+    var a=n%10,b=n%100;
+    if(a===1&&b!==11)return 'ночь';
+    if(a>=2&&a<=4&&(b<10||b>=20))return 'ночи';
+    return 'ночей';
+  };
+  var fin=$('fin'),fout=$('fout'),fnights=$('fnights');
+  var today=new Date();
+  fin.min=iso(today);
+  fout.min=iso(new Date(today.getTime()+DAY));
+  function updDates(){
+    if(fin.value){
+      var next=iso(new Date(new Date(fin.value).getTime()+DAY));
+      fout.min=next;
+      if(fout.value&&fout.value<=fin.value)fout.value=next;
+    }
+    if(fin.value&&fout.value&&fout.value>fin.value){
+      var n=Math.round((new Date(fout.value)-new Date(fin.value))/DAY);
+      fnights.textContent='Итого: '+n+' '+nightsWord(n);
+      fnights.classList.add('on');
+    }else{
+      fnights.classList.remove('on');
+    }
+  }
+  fin.addEventListener('change',updDates);
+  fout.addEventListener('change',updDates);
+
+  /* кнопка на карточке номера подставляет категорию в форму */
+  document.querySelectorAll('.room-pick').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      $('fcat').value=btn.getAttribute('data-cat');
+      $('booking').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+    });
+  });
+
+  /* маска телефона +7 */
+  $('fphone').addEventListener('input',function(e){
+    var v=e.target.value.replace(/\D/g,'').slice(0,11);
+    if(v.charAt(0)==='8')v='7'+v.slice(1);
+    if(v&&v.charAt(0)!=='7')v='7'+v;
+    var out='+7';
+    if(v.length>1)out+=' ('+v.slice(1,4);
+    if(v.length>=5)out+=') '+v.slice(4,7);
+    if(v.length>=8)out+='-'+v.slice(7,9);
+    if(v.length>=10)out+='-'+v.slice(9,11);
+    e.target.value=v?out:'';
+  });
+
+  /* отправка формы — честный демо-экран */
+  var form=$('bookForm');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!form.reportValidity||form.reportValidity()){
+      form.style.display='none';
+      $('bookOk').style.display='block';
+    }
+  });
+})();
+</script>
+</body>
+</html>
