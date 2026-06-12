@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Отель Марко Поло 4★ Элиста — прямое бронирование | Сити-Чесс</title>
+<meta name="description" content="Единственный 4-звёздочный отель Элисты в квартале Сити-Чесс. Рейтинг 9.2, 435+ оценок. Завтрак включён, сауна, бесплатная парковка. Бронируйте напрямую — без комиссии агрегаторов.">
+<meta name="keywords" content="гостиница Марко Поло Элиста, отель Элиста 4 звезды, Сити-Чесс отель, бронирование отель Элиста, отель Калмыкия">
+<meta property="og:title" content="Отель Марко Поло 4★ — Элиста, Сити-Чесс">
+<meta property="og:description" content="Единственный 4★ отель Калмыкии. Прямое бронирование без комиссии.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=1600&q=80">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#0F1316; --char:#171D22; --char-2:#1F262C;
+  --ivory:#F3EEE4; --paper:#FAF7F1; --ink:#262B30; --mut:#6E747B;
+  --brass:#AE9059; --brass-2:#C9AC74; --brass-3:#E3CD9E;
+  --on-dark:#D8D3C8; --on-dark-mut:#8E8B82;
+  --line-l:#E4DDCE; --line-d:rgba(243,238,228,.13);
+  --serif:'Cormorant Garamond',serif; --sans:'Jost',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-weight:400;color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+::selection{background:var(--brass);color:#fff}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.08}
+.eyebrow{font-size:12px;font-weight:500;letter-spacing:.34em;text-transform:uppercase;color:var(--brass)}
+.eyebrow::after{content:"";display:inline-block;width:44px;height:1px;background:var(--brass);vertical-align:middle;margin-left:14px;opacity:.6}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--sans);font-weight:500;font-size:13.5px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;padding:17px 34px;transition:.3s;line-height:1;border:1px solid transparent}
+.btn-brass{background:var(--brass);color:#fff}
+.btn-brass:hover{background:var(--brass-2)}
+.btn-line{background:transparent;color:var(--brass-3);border-color:rgba(201,172,116,.55)}
+.btn-line:hover{border-color:var(--brass-3);color:#fff}
+.btn-line-d{background:transparent;color:var(--ink);border-color:#C8BFA8}
+.btn-line-d:hover{border-color:var(--brass);color:var(--brass)}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* шахматный разделитель — сигнатура Сити-Чесс */
+.chess-rule{height:10px;background:repeating-conic-gradient(var(--brass) 0% 25%,transparent 0% 50%) 0 0/20px 20px;opacity:.28}
+
+/* демо-плашка */
+.demo-note{background:var(--night);color:var(--on-dark-mut);text-align:center;font-size:12.5px;letter-spacing:.04em;padding:8px 18px;border-bottom:1px solid var(--line-d)}
+.demo-note b{color:var(--brass-3);font-weight:500}
+
+/* шапка */
+header{position:fixed;top:var(--note-h,33px);left:0;right:0;z-index:80;transition:.35s;border-bottom:1px solid transparent}
+header.scrolled{position:fixed;top:0;background:rgba(15,19,22,.92);backdrop-filter:blur(12px);border-bottom-color:var(--line-d)}
+.head-in{display:flex;align-items:center;justify-content:space-between;height:78px;gap:24px;color:#fff}
+.logo{display:flex;flex-direction:column;line-height:1.15}
+.logo .name{font-family:var(--sans);font-weight:500;font-size:19px;letter-spacing:.34em;text-transform:uppercase}
+.logo .name .kn{color:var(--brass-3)}
+.logo .place{font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--on-dark-mut)}
+.nav{display:flex;gap:34px}
+.nav a{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--on-dark);transition:.2s;padding-bottom:4px;border-bottom:1px solid transparent}
+.nav a:hover{color:#fff;border-bottom-color:var(--brass)}
+.head-cta{display:flex;align-items:center;gap:20px}
+.head-phone{font-size:14px;letter-spacing:.05em;color:var(--on-dark)}
+.head-phone:hover{color:#fff}
+.head-cta .btn{padding:13px 24px;font-size:12px}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=1900&q=80') center/cover no-repeat;animation:slowzoom 22s ease-out forwards}
+@keyframes slowzoom{from{transform:scale(1.08)}to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,19,22,.62) 0%,rgba(15,19,22,.18) 42%,rgba(15,19,22,.82) 100%)}
+.hero-in{position:relative;z-index:2;width:100%;padding:170px 0 150px}
+.hero .eyebrow{color:var(--brass-3)}
+.hero h1{font-size:clamp(54px,8.4vw,108px);font-weight:500;margin-top:22px;letter-spacing:.01em}
+.hero h1 .it{font-style:italic;font-weight:400;color:var(--brass-3)}
+.hero .sub{font-size:17px;font-weight:300;letter-spacing:.02em;color:var(--on-dark);max-width:560px;margin-top:18px}
+.hero-trust{display:flex;gap:34px;flex-wrap:wrap;margin-top:34px}
+.hero-trust div{font-size:13px;letter-spacing:.06em;color:var(--on-dark-mut)}
+.hero-trust b{display:block;font-family:var(--serif);font-size:26px;font-weight:500;color:#fff;letter-spacing:0}
+.hero-trust b small{font-size:14px;color:var(--brass-3)}
+
+/* лента бронирования */
+.bookbar-wrap{position:relative;z-index:6;margin-top:-66px}
+.bookbar{display:grid;grid-template-columns:1fr 1fr 1fr 1.3fr auto;gap:0;background:var(--ivory);box-shadow:0 30px 70px rgba(15,19,22,.35)}
+.bb-cell{padding:20px 24px;border-right:1px solid var(--line-l)}
+.bb-cell label{display:block;font-size:10.5px;font-weight:500;letter-spacing:.26em;text-transform:uppercase;color:var(--mut);margin-bottom:6px}
+.bb-cell input,.bb-cell select{width:100%;border:none;background:transparent;font-family:var(--sans);font-size:15.5px;color:var(--ink);cursor:pointer}
+.bb-cell input:focus,.bb-cell select:focus{outline:none}
+.bookbar .btn{height:100%;padding:0 40px}
+.bb-nights{font-size:11.5px;color:var(--brass);letter-spacing:.06em;margin-top:3px;min-height:15px}
+
+/* статистика */
+.stats{background:var(--night);color:#fff;padding:74px 0}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{text-align:center;padding:6px 18px;border-right:1px solid var(--line-d)}
+.stat:last-child{border-right:none}
+.stat .num{font-family:var(--serif);font-size:54px;font-weight:500;line-height:1;color:var(--brass-3)}
+.stat .num small{font-size:24px}
+.stat .lbl{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--on-dark-mut);margin-top:12px}
+
+/* секции */
+.section{padding:110px 0}
+.sec-head{max-width:660px;margin-bottom:18px}
+.sec-head h2{font-size:clamp(34px,4.4vw,54px);margin-top:18px}
+.sec-head .lead{font-size:16px;font-weight:300;color:var(--mut);margin-top:16px}
+.sec-head.center{text-align:center;margin-left:auto;margin-right:auto}
+.sec-head.center .eyebrow::after{display:none}
+.sec-head.center .eyebrow::before{content:"";display:inline-block;width:44px;height:1px;background:var(--brass);vertical-align:middle;margin-right:14px;opacity:.6}
+.sec-head.center .eyebrow::after{display:inline-block}
+
+/* номера — редакционные ряды */
+.room{display:grid;grid-template-columns:1.08fr .92fr;gap:0;margin-top:56px;background:#fff;box-shadow:0 16px 50px rgba(38,43,48,.08)}
+.room.flip .room-ph{order:2}
+.room-ph{min-height:430px;background:var(--char) center/cover no-repeat;position:relative;overflow:hidden}
+.room-ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(15,19,22,.25))}
+.room-body{padding:54px 58px;display:flex;flex-direction:column;justify-content:center}
+.room-body .tag{font-size:11px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--brass)}
+.room-body h3{font-size:clamp(26px,2.8vw,36px);margin-top:14px}
+.room-body p{font-size:15px;font-weight:300;color:var(--mut);margin-top:14px;max-width:420px}
+.room-meta{display:flex;align-items:baseline;gap:14px;margin-top:26px;padding-top:22px;border-top:1px solid var(--line-l)}
+.room-meta .price{font-family:var(--serif);font-size:30px;font-weight:500}
+.room-meta .per{font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut)}
+.room-body .btn{align-self:flex-start;margin-top:26px}
+.rooms-note{font-size:13px;color:var(--mut);margin-top:34px;text-align:center}
+
+/* ресторан */
+.dining{position:relative;color:#fff;background:var(--night)}
+.dining-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:0;align-items:stretch}
+.dining-ph{min-height:560px;background:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1300&q=80') center/cover no-repeat}
+.dining-body{padding:96px 76px;display:flex;flex-direction:column;justify-content:center}
+.dining-body h2{font-size:clamp(32px,3.8vw,48px);margin-top:18px}
+.dining-body p{font-size:15.5px;font-weight:300;color:var(--on-dark);margin-top:18px;max-width:460px}
+.dining-points{margin-top:28px;display:flex;flex-direction:column;gap:12px}
+.dining-points div{display:flex;gap:14px;font-size:14.5px;color:var(--on-dark)}
+.dining-points span{color:var(--brass-3)}
+.dining-body .btn{align-self:flex-start;margin-top:32px}
+
+/* удобства */
+.amen-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:60px}
+.amen{text-align:center;padding:42px 26px;border:1px solid var(--line-l);background:#fff;transition:.3s}
+.amen:hover{border-color:var(--brass);transform:translateY(-5px);box-shadow:0 18px 44px rgba(38,43,48,.1)}
+.amen .ic{width:62px;height:62px;margin:0 auto 22px;border:1px solid var(--brass);border-radius:50%;display:grid;place-items:center;font-size:24px;color:var(--brass)}
+.amen h3{font-size:21px}
+.amen p{font-size:13.5px;font-weight:300;color:var(--mut);margin-top:9px}
+
+/* Сити-Чесс */
+.chess{position:relative;background:var(--ivory);overflow:hidden}
+.chess .knight{position:absolute;right:-60px;bottom:-90px;font-size:480px;line-height:1;color:rgba(174,144,89,.1);user-select:none;pointer-events:none}
+.chess-grid{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;z-index:2}
+.chess-grid h2{font-size:clamp(32px,3.8vw,48px);margin-top:18px}
+.chess-grid .txt p{font-size:15.5px;font-weight:300;color:var(--mut);margin-top:16px}
+.chess-facts{margin-top:28px;display:flex;flex-direction:column;gap:0}
+.chess-facts div{display:flex;gap:16px;padding:15px 0;border-bottom:1px solid var(--line-l);font-size:14.5px}
+.chess-facts div:last-child{border-bottom:none}
+.chess-facts b{font-family:var(--serif);font-size:18px;color:var(--brass);font-weight:600;min-width:26px}
+.map-frame{border:1px solid #D9CFB9;padding:10px;background:#fff}
+.map-frame iframe{width:100%;height:430px;border:0;display:block;filter:saturate(.85)}
+
+/* отзывы */
+.reviews{background:var(--night);color:#fff}
+.rev-main{max-width:820px;margin:48px auto 0;text-align:center}
+.rev-main .stars{color:var(--brass-3);letter-spacing:5px;font-size:16px}
+.rev-main p{font-family:var(--serif);font-style:italic;font-size:clamp(22px,3vw,32px);font-weight:400;line-height:1.45;margin-top:22px}
+.rev-main .who{margin-top:24px;font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--on-dark-mut)}
+.rev-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-d);margin-top:64px;border:1px solid var(--line-d)}
+.rev-cell{background:var(--char);padding:34px 30px}
+.rev-cell .stars{color:var(--brass-3);letter-spacing:3px;font-size:13px}
+.rev-cell p{font-size:14px;font-weight:300;color:var(--on-dark);margin-top:14px;line-height:1.7}
+.rev-cell .who{margin-top:18px;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--on-dark-mut)}
+
+/* бронирование */
+.booking-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:64px;align-items:start;margin-top:30px}
+.bk-info h2{font-size:clamp(32px,3.8vw,48px);margin-top:18px}
+.bk-info p{font-size:15.5px;font-weight:300;color:var(--mut);margin-top:16px;max-width:420px}
+.bk-lines{margin-top:30px;display:flex;flex-direction:column}
+.bk-lines a,.bk-lines div{display:flex;justify-content:space-between;gap:18px;padding:15px 0;border-bottom:1px solid var(--line-l);font-size:14.5px}
+.bk-lines span{color:var(--mut)}
+.bk-lines b{font-weight:500;text-align:right}
+.bk-lines a:hover b{color:var(--brass)}
+.bform{background:#fff;border:1px solid var(--line-l);padding:44px 46px;box-shadow:0 20px 60px rgba(38,43,48,.08)}
+.bform h3{font-size:26px}
+.bform .bsub{font-size:13.5px;font-weight:300;color:var(--mut);margin:8px 0 24px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--mut);margin-bottom:8px}
+.field input,.field select{width:100%;padding:14px 15px;border:1px solid var(--line-l);background:var(--paper);font-size:15px;font-family:var(--sans);color:var(--ink);transition:.2s}
+.field input:focus,.field select:focus{outline:none;border-color:var(--brass);background:#fff}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.nights-note{display:none;font-size:12.5px;letter-spacing:.08em;color:var(--brass);border:1px solid rgba(174,144,89,.3);background:rgba(174,144,89,.07);padding:10px 14px;margin:-4px 0 16px;text-align:center}
+.nights-note.on{display:block}
+.bform .btn{width:100%}
+.form-note{font-size:11.5px;color:var(--mut);text-align:center;margin-top:13px;font-weight:300}
+.book-ok{display:none;text-align:center;padding:30px 8px}
+.book-ok .ico{width:64px;height:64px;border-radius:50%;border:1px solid var(--brass);color:var(--brass);display:grid;place-items:center;margin:0 auto 18px;font-size:28px}
+.book-ok h4{font-family:var(--serif);font-size:26px}
+.book-ok p{font-size:14px;font-weight:300;color:var(--mut);margin-top:12px}
+
+/* FAQ */
+.faq{max-width:780px;margin:46px auto 0}
+.qa{border-bottom:1px solid var(--line-l)}
+.qa summary{cursor:pointer;list-style:none;padding:24px 6px;font-family:var(--serif);font-size:21px;font-weight:500;display:flex;justify-content:space-between;align-items:center;gap:18px;transition:.2s}
+.qa summary:hover{color:var(--brass)}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary .pl{flex:0 0 auto;font-family:var(--sans);font-size:20px;font-weight:300;color:var(--brass);transition:.25s}
+.qa[open] summary .pl{transform:rotate(45deg)}
+.qa p{font-size:14.5px;font-weight:300;color:var(--mut);padding:0 6px 24px;max-width:660px}
+
+/* футер */
+footer{background:var(--night);color:var(--on-dark-mut);padding:80px 0 34px}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:44px}
+footer .logo .name{color:#fff}
+footer .about{font-size:14px;font-weight:300;margin-top:16px;max-width:320px;line-height:1.8}
+footer h4{font-size:11.5px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:#fff;margin-bottom:18px}
+footer li{list-style:none;font-size:14px;font-weight:300;line-height:2.2}
+footer a:hover{color:var(--brass-3)}
+.foot-bottom{border-top:1px solid var(--line-d);margin-top:54px;padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12px;letter-spacing:.04em}
+
+.btn:focus-visible,.bb-cell input:focus-visible,.bb-cell select:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
+
+@media(max-width:980px){
+  .nav,.head-phone{display:none}
+  .hero-in{padding:140px 0 120px}
+  .bookbar{grid-template-columns:1fr 1fr;margin:0 0}
+  .bookbar .btn{grid-column:1/-1;padding:20px}
+  .bb-cell{border-bottom:1px solid var(--line-l)}
+  .stats-grid{grid-template-columns:repeat(2,1fr);row-gap:40px}
+  .stat:nth-child(2){border-right:none}
+  .room,.room.flip{grid-template-columns:1fr}
+  .room.flip .room-ph{order:0}
+  .room-ph{min-height:300px}
+  .room-body{padding:36px 28px}
+  .dining-grid,.chess-grid,.booking-grid,.foot-grid{grid-template-columns:1fr}
+  .dining-ph{min-height:320px}
+  .dining-body{padding:60px 28px}
+  .rev-row{grid-template-columns:1fr}
+  .amen-grid{grid-template-columns:repeat(2,1fr);gap:14px}
+  .section{padding:72px 0}
+  .chess .knight{font-size:300px;right:-70px}
+}
+@media(max-width:560px){
+  .amen-grid{grid-template-columns:1fr}
+  .bookbar{grid-template-columns:1fr}
+  .bform{padding:30px 22px}
+  .foot-grid{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  .reveal{transition:none;opacity:1;transform:none}
+  .hero-bg{animation:none}
+}
+</style>
+</head>
+<body>
+
+<div class="demo-note" id="demoNote"><b>DEMO-макет</b> · адрес, телефоны и рейтинги — реальные · цены на номера — диапазон из агрегаторов · фото — временные (реальные — Instagram @marcopolo_elista)</div>
+
+<header id="hdr">
+  <div class="wrap head-in">
+    <a href="#" class="logo">
+      <span class="name">Марко<span class="kn"> ♞ </span>Поло</span>
+      <span class="place">Сити-Чесс · Элиста</span>
+    </a>
+    <nav class="nav">
+      <a href="#rooms">Номера</a>
+      <a href="#dining">Ресторан</a>
+      <a href="#location">Сити-Чесс</a>
+      <a href="#reviews">Отзывы</a>
+    </nav>
+    <div class="head-cta">
+      <a class="head-phone" href="tel:+79054092525">+7 (905) 409-25-25</a>
+      <a class="btn btn-line" href="#booking">Забронировать</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="wrap hero-in">
+    <span class="eyebrow">Единственный 4★ отель Калмыкии</span>
+    <h1>Марко Поло<br><span class="it">в шахматной столице степи</span></h1>
+    <p class="sub">56 номеров в квартале Сити-Чесс. Завтрак-шведский стол, ресторан с калмыцкой и европейской кухней, финская сауна и собственная парковка.</p>
+    <div class="hero-trust">
+      <div><b>9.2<small> /10</small></b>Островок · 195 отзывов</div>
+      <div><b>4.9<small> /5</small></b>2ГИС · 435 оценок</div>
+      <div><b>№ 1</b>в Элисте · TripAdvisor</div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap bookbar-wrap">
+  <form class="bookbar" id="barForm">
+    <div class="bb-cell">
+      <label for="barIn">Заезд</label>
+      <input id="barIn" type="date" required>
+    </div>
+    <div class="bb-cell">
+      <label for="barOut">Выезд</label>
+      <input id="barOut" type="date" required>
+      <div class="bb-nights" id="barNights"></div>
+    </div>
+    <div class="bb-cell">
+      <label for="barGuests">Гости</label>
+      <select id="barGuests"><option>1 гость</option><option selected>2 гостя</option><option>3 гостя</option><option>4 гостя и более</option></select>
+    </div>
+    <div class="bb-cell">
+      <label for="barRoom">Категория</label>
+      <select id="barRoom">
+        <option>Стандарт (1 двуспальная кровать)</option>
+        <option>Стандарт (2 раздельные кровати)</option>
+        <option>Стандарт с террасой</option>
+        <option>Полулюкс / Superior</option>
+        <option>Люкс (2-комнатный)</option>
+        <option>Люкс для новобрачных</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-brass">Проверить даты</button>
+  </form>
+</div>
+
+<section class="stats">
+  <div class="wrap stats-grid reveal">
+    <div class="stat"><div class="num">4<small>★</small></div><div class="lbl">Единственный в Калмыкии</div></div>
+    <div class="stat"><div class="num">56</div><div class="lbl">Номеров</div></div>
+    <div class="stat"><div class="num">9.2</div><div class="lbl">Рейтинг на Островок</div></div>
+    <div class="stat"><div class="num">24/7</div><div class="lbl">Стойка регистрации</div></div>
+  </div>
+</section>
+
+<section class="section" id="rooms">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Номера</span>
+      <h2>Выберите свой номер</h2>
+      <p class="lead">Во всех номерах — кондиционер, телевизор, холодильник, чайник, банные халаты и тапочки. Завтрак-шведский стол включён.</p>
+    </div>
+
+    <div class="room reveal">
+      <div class="room-ph" style="background-image:url('https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1300&q=80')"></div>
+      <div class="room-body">
+        <span class="tag">Категория I</span>
+        <h3>Стандарт</h3>
+        <p>Двуспальная кровать или две раздельные. Всё необходимое для деловой поездки и спокойного отдыха — без лишнего.</p>
+        <div class="room-meta"><span class="price">от 5 000 ₽</span><span class="per">за ночь</span></div>
+        <a href="#booking" class="btn btn-line-d room-book" data-room="Стандарт (1 двуспальная кровать)">Забронировать</a>
+      </div>
+    </div>
+
+    <div class="room flip reveal">
+      <div class="room-ph" style="background-image:url('https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=1300&q=80')"></div>
+      <div class="room-body">
+        <span class="tag">Категория II</span>
+        <h3>Стандарт с террасой</h3>
+        <p>Все удобства стандарта плюс выход на личную террасу с видом на внутренний двор. Утренний кофе на свежем воздухе.</p>
+        <div class="room-meta"><span class="price">по запросу</span><span class="per">цену уточним при брони</span></div>
+        <a href="#booking" class="btn btn-line-d room-book" data-room="Стандарт с террасой">Забронировать</a>
+      </div>
+    </div>
+
+    <div class="room reveal">
+      <div class="room-ph" style="background-image:url('https://images.unsplash.com/photo-1540518614846-7eded433c457?w=1300&q=80')"></div>
+      <div class="room-body">
+        <span class="tag">Категория III</span>
+        <h3>Полулюкс · Superior</h3>
+        <p>Увеличенная площадь, улучшенная отделка и мягкая зона для отдыха. Повышенный комфорт для тех, кто остаётся дольше.</p>
+        <div class="room-meta"><span class="price">по запросу</span><span class="per">цену уточним при брони</span></div>
+        <a href="#booking" class="btn btn-line-d room-book" data-room="Полулюкс / Superior">Забронировать</a>
+      </div>
+    </div>
+
+    <div class="room flip reveal">
+      <div class="room-ph" style="background-image:url('https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=1300&q=80')"></div>
+      <div class="room-body">
+        <span class="tag">Категория IV</span>
+        <h3>Люкс</h3>
+        <p>Просторный двухкомнатный номер с гостиной. Первоклассное постельное бельё, премиальная косметика, приоритетный сервис. Для молодожёнов — люкс с романтическим оформлением по запросу.</p>
+        <div class="room-meta"><span class="price">от 7 500 ₽</span><span class="per">за ночь</span></div>
+        <a href="#booking" class="btn btn-line-d room-book" data-room="Люкс (2-комнатный)">Забронировать</a>
+      </div>
+    </div>
+
+    <p class="rooms-note">Цены — ориентировочный диапазон из агрегаторов; точная стоимость зависит от дат и тарифа. Бронируя напрямую, вы не платите комиссию посредников.</p>
+  </div>
+</section>
+
+<div class="chess-rule" aria-hidden="true"></div>
+
+<section class="dining" id="dining">
+  <div class="dining-grid">
+    <div class="dining-ph reveal"></div>
+    <div class="dining-body">
+      <span class="eyebrow reveal">Ресторан</span>
+      <h2 class="reveal">Калмыцкая и европейская кухня</h2>
+      <p class="reveal">Гости отдельно отмечают завтраки и кофе. Летняя веранда работает и зимой — с подогревом. Средний чек — около 1 500 ₽ на персону.</p>
+      <div class="dining-points reveal">
+        <div><span>—</span>Завтрак-шведский стол включён в большинство тарифов</div>
+        <div><span>—</span>Банкетный зал: свадьбы, корпоративы, деловые встречи</div>
+        <div><span>—</span>Финская сауна и бильярд — не выходя из отеля</div>
+      </div>
+      <a class="btn btn-line reveal" href="tel:+79054092525">Заказать банкет</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="amenities">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Сервис</span>
+      <h2>Всё включено в проживание</h2>
+    </div>
+    <div class="amen-grid">
+      <div class="amen reveal"><div class="ic">☀</div><h3>Завтрак каждое утро</h3><p>Шведский стол — разнообразный и сытный, хвалят даже искушённые гости</p></div>
+      <div class="amen reveal" style="transition-delay:.07s"><div class="ic">♨</div><h3>Финская сауна</h3><p>С зоной отдыха; бронирование — на стойке регистрации</p></div>
+      <div class="amen reveal" style="transition-delay:.14s"><div class="ic">⚑</div><h3>Огороженная парковка</h3><p>Бесплатно на территории — место найдётся и в высокий сезон</p></div>
+      <div class="amen reveal" style="transition-delay:.21s"><div class="ic">✦</div><h3>Стойка 24/7</h3><p>Заезд с 14:00, выезд до 12:00; ранний заезд — по запросу</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section chess" id="location">
+  <span class="knight" aria-hidden="true">♞</span>
+  <div class="wrap chess-grid">
+    <div class="txt">
+      <span class="eyebrow reveal">Расположение</span>
+      <h2 class="reveal">Квартал Сити-Чесс</h2>
+      <p class="reveal">Отель стоит в самом необычном квартале России — шахматном городке, построенном к Всемирной шахматной олимпиаде. Тихая закрытая территория и главные достопримечательности Элисты рядом.</p>
+      <div class="chess-facts reveal">
+        <div><b>24</b>квартал Сити-Чесс — адрес отеля</div>
+        <div><b>3 км</b>до Золотой обители Будды Шакьямуни</div>
+        <div><b>17 км</b>до аэропорта Элисты — трансфер по запросу</div>
+      </div>
+    </div>
+    <div class="map-frame reveal">
+      <iframe loading="lazy" title="Отель Марко Поло на карте" src="https://yandex.ru/map-widget/v1/?mode=search&text=%D0%93%D0%BE%D1%81%D1%82%D0%B8%D0%BD%D0%B8%D1%86%D0%B0%20%D0%9C%D0%B0%D1%80%D0%BA%D0%BE%20%D0%9F%D0%BE%D0%BB%D0%BE%20%D0%AD%D0%BB%D0%B8%D1%81%D1%82%D0%B0%20%D0%A1%D0%B8%D1%82%D0%B8-%D0%A7%D0%B5%D1%81%D1%81%2024&z=15"></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="section reviews" id="reviews">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Отзывы гостей</span>
+      <h2>9.2 — по оценкам 435+ гостей</h2>
+    </div>
+    <div class="rev-main reveal">
+      <div class="stars">★★★★★</div>
+      <p>«В Элисте это единственное место, где можно провести ночь с комфортом и привычными удобствами. Приятный ресторан с хорошей кухней. Персонал вежливый и прилежный»</p>
+      <div class="who">Гость · TripAdvisor</div>
+    </div>
+    <div class="rev-row">
+      <div class="rev-cell reveal"><div class="stars">★★★★★</div><p>Тихий спокойный район, отдельная территория, просторные номера, хорошая косметика в ванной. Любые просьбы выполняются безупречно.</p><div class="who">Островок</div></div>
+      <div class="rev-cell reveal" style="transition-delay:.08s"><div class="stars">★★★★★</div><p>Бельё белоснежное, полотенца меняются каждый день. Завтрак разнообразный и вкусный — шведский стол.</p><div class="who">Booking.com</div></div>
+      <div class="rev-cell reveal" style="transition-delay:.16s"><div class="stars">★★★★★</div><p>Новое здание, свежий ремонт, удобная мебель. Ресторан с шикарной верандой — зимой с подогревом.</p><div class="who">Яндекс.Карты</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="booking">
+  <div class="wrap booking-grid">
+    <div class="bk-info">
+      <span class="eyebrow reveal">Прямое бронирование</span>
+      <h2 class="reveal">Без комиссии агрегаторов</h2>
+      <p class="reveal">Оставьте заявку — подтвердим бронирование в течение часа. Вы платите ровно столько, сколько стоит номер.</p>
+      <div class="bk-lines reveal">
+        <a href="tel:+79054092525"><span>Бронирование</span><b>+7 (905) 409-25-25</b></a>
+        <a href="tel:+79618417070"><span>Отель / сауна</span><b>+7 (961) 841-70-70</b></a>
+        <a href="https://wa.me/79618417070"><span>WhatsApp</span><b>Написать сообщение</b></a>
+        <div><span>Заезд / выезд</span><b>с 14:00 / до 12:00</b></div>
+        <div><span>Адрес</span><b>Элиста, Сити-Чесс, 24</b></div>
+      </div>
+    </div>
+    <div class="bform reveal" style="transition-delay:.1s">
+      <form id="bookForm">
+        <h3>Заявка на бронирование</h3>
+        <p class="bsub">Ответим в течение часа и подтвердим бронь. Ранний заезд и поздний выезд — по запросу.</p>
+        <div class="field-row">
+          <div class="field"><label for="bin">Заезд</label><input id="bin" type="date" required></div>
+          <div class="field"><label for="bout">Выезд</label><input id="bout" type="date" required></div>
+        </div>
+        <p class="nights-note" id="bnights"></p>
+        <div class="field-row">
+          <div class="field"><label for="bguests">Гостей</label><select id="bguests"><option>1 гость</option><option selected>2 гостя</option><option>3 гостя</option><option>4 гостя и более</option></select></div>
+          <div class="field"><label for="broom">Категория номера</label><select id="broom">
+            <option>Стандарт (1 двуспальная кровать)</option>
+            <option>Стандарт (2 раздельные кровати)</option>
+            <option>Стандарт с террасой</option>
+            <option>Полулюкс / Superior</option>
+            <option>Люкс (2-комнатный)</option>
+            <option>Люкс для новобрачных</option>
+            <option>Корпоративное бронирование</option>
+            <option>Банкет / мероприятие</option>
+          </select></div>
+        </div>
+        <div class="field"><label for="bname">Ваше имя</label><input id="bname" type="text" placeholder="Как к вам обращаться" required></div>
+        <div class="field"><label for="bphone">Телефон</label><input id="bphone" type="tel" inputmode="tel" placeholder="+7 (___) ___-__-__" required></div>
+        <button type="submit" class="btn btn-brass">Отправить заявку</button>
+        <p class="form-note">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</p>
+      </form>
+      <div class="book-ok" id="bookOk">
+        <div class="ico">✓</div>
+        <h4>Заявка принята</h4>
+        <p>Это демо — заявка никуда не отправилась. В рабочей версии она мгновенно приходит на стойку регистрации в Telegram, а вы получаете подтверждение с деталями заезда.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Вопросы</span>
+      <h2>Перед поездкой</h2>
+    </div>
+    <div class="faq reveal">
+      <details class="qa" open><summary>В чём выгода прямого бронирования?<span class="pl">+</span></summary><p>Прямое бронирование исключает комиссию агрегаторов: вы платите ровно столько, сколько стоит номер. Заявку подтверждаем в течение часа.</p></details>
+      <details class="qa"><summary>Завтрак включён в стоимость?<span class="pl">+</span></summary><p>Да, завтрак-шведский стол включён в большинство тарифов. Условия конкретного тарифа уточним при бронировании.</p></details>
+      <details class="qa"><summary>Когда заезд и выезд?<span class="pl">+</span></summary><p>Заезд — с 14:00, выезд — до 12:00. Ранний заезд и поздний выезд возможны по запросу в зависимости от загрузки.</p></details>
+      <details class="qa"><summary>Как добраться из аэропорта?<span class="pl">+</span></summary><p>Аэропорт Элисты — в 17–18 км. Организуем платный трансфер по запросу; также работают Яндекс Такси и Максим.</p></details>
+      <details class="qa"><summary>Можно ли провести свадьбу или корпоратив?<span class="pl">+</span></summary><p>Да, есть банкетный зал и летняя веранда. Меню и условия — по телефону +7 (905) 409-25-25.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer id="contacts">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#" class="logo"><span class="name">Марко<span class="kn"> ♞ </span>Поло</span><span class="place">Сити-Чесс · Элиста</span></a>
+        <p class="about">Единственный 4-звёздочный отель Элисты. 56 номеров, ресторан, финская сауна, бесплатная парковка. Рейтинг 9.2 — по отзывам 435+ гостей.</p>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <ul>
+          <li>г. Элиста, квартал Сити-Чесс, 24</li>
+          <li><a href="tel:+79054092525">+7 (905) 409-25-25</a> — бронирование</li>
+          <li><a href="tel:+79618417070">+7 (961) 841-70-70</a> — отель, сауна</li>
+          <li><a href="https://wa.me/79618417070">WhatsApp</a> · <a href="mailto:marcopolo.elista@gmail.com">эл. почта</a></li>
+          <li>Стойка регистрации — 24/7</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Разделы</h4>
+        <ul>
+          <li><a href="#rooms">Номера</a></li>
+          <li><a href="#dining">Ресторан</a></li>
+          <li><a href="#location">Сити-Чесс</a></li>
+          <li><a href="#reviews">Отзывы</a></li>
+          <li><a href="#booking">Бронирование</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Отель Марко Поло, Элиста. Демо-макет.</span>
+      <span>Цены — диапазон из агрегаторов · фото временные</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  function $(id){return document.getElementById(id)}
+  /* шапка: встаёт под демо-плашку любой высоты, при скролле прилипает к верху */
+  var hdr=$('hdr'),note=$('demoNote');
+  function noteH(){document.documentElement.style.setProperty('--note-h',(window.scrollY>40?0:note.offsetHeight)+'px')}
+  var onScroll=function(){hdr.classList.toggle('scrolled',window.scrollY>40);noteH()};
+  onScroll();addEventListener('scroll',onScroll,{passive:true});
+  addEventListener('resize',noteH,{passive:true});
+  /* reveal */
+  var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})},{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  /* даты: минимумы и счётчик ночей (обе пары полей) */
+  function iso(d){return d.toISOString().slice(0,10)}
+  function plural(n){var a=n%10,b=n%100;if(a===1&&b!==11)return 'ночь';if(a>=2&&a<=4&&(b<10||b>=20))return 'ночи';return 'ночей'}
+  function wire(inEl,outEl,noteEl,inline){
+    var today=new Date();inEl.min=iso(today);
+    outEl.min=iso(new Date(today.getTime()+864e5));
+    function upd(){
+      if(inEl.value){var next=new Date(new Date(inEl.value).getTime()+864e5);outEl.min=iso(next);if(outEl.value&&outEl.value<=inEl.value)outEl.value=iso(next)}
+      if(noteEl){var ok=inEl.value&&outEl.value&&outEl.value>inEl.value;
+        if(ok){var n=Math.round((new Date(outEl.value)-new Date(inEl.value))/864e5);
+          noteEl.textContent=(inline?'':'Итого: ')+n+' '+plural(n);
+          if(!inline)noteEl.classList.add('on')}
+        else if(!inline)noteEl.classList.remove('on');
+        else noteEl.textContent='';}
+    }
+    inEl.addEventListener('change',upd);outEl.addEventListener('change',upd);
+  }
+  wire($('barIn'),$('barOut'),$('barNights'),true);
+  wire($('bin'),$('bout'),$('bnights'),false);
+  /* лента бронирования -> форма */
+  $('barForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    if($('barIn').value)$('bin').value=$('barIn').value;
+    if($('barOut').value)$('bout').value=$('barOut').value;
+    $('bguests').value=$('barGuests').value;
+    $('broom').value=$('barRoom').value;
+    $('bin').dispatchEvent(new Event('change'));
+    $('booking').scrollIntoView({behavior:'smooth'});
+  });
+  /* кнопки номеров -> подстановка категории */
+  document.querySelectorAll('.room-book').forEach(function(b){b.addEventListener('click',function(){
+    $('broom').value=b.getAttribute('data-room');
+  })});
+  /* маска телефона */
+  document.querySelectorAll('input[type=tel]').forEach(function(phone){phone.addEventListener('input',function(e){
+    var v=e.target.value.replace(/\D/g,'').slice(0,11);
+    if(v.indexOf('8')===0)v='7'+v.slice(1);
+    if(v&&v.indexOf('7')!==0)v='7'+v;
+    var out='+7';
+    if(v.length>1)out+=' ('+v.slice(1,4);
+    if(v.length>=5)out+=') '+v.slice(4,7);
+    if(v.length>=8)out+='-'+v.slice(7,9);
+    if(v.length>=10)out+='-'+v.slice(9,11);
+    e.target.value=out;
+  })});
+  /* форма */
+  var bf=$('bookForm');
+  bf.addEventListener('submit',function(e){e.preventDefault();bf.style.display='none';$('bookOk').style.display='block'});
+})();
+</script>
+</body>
+</html>
