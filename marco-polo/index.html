@@ -9,7 +9,7 @@
 <meta property="og:title" content="Отель Марко Поло 4★ — Элиста, Сити-Чесс">
 <meta property="og:description" content="Единственный 4★ отель Калмыкии. Прямое бронирование без комиссии.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=1600&q=80">
+<meta property="og:image" content="https://martinidennn.github.io/elista-demos/marco-polo/img/photo-1.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -67,7 +67,7 @@ header.scrolled{position:fixed;top:0;background:rgba(15,19,22,.92);backdrop-filt
 
 /* hero */
 .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=1900&q=80') center/cover no-repeat;animation:slowzoom 22s ease-out forwards}
+.hero-bg{position:absolute;inset:0;background:url('img/photo-1.jpg') center/cover no-repeat;animation:slowzoom 22s ease-out forwards}
 @keyframes slowzoom{from{transform:scale(1.08)}to{transform:scale(1)}}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,19,22,.62) 0%,rgba(15,19,22,.18) 42%,rgba(15,19,22,.82) 100%)}
 .hero-in{position:relative;z-index:2;width:100%;padding:170px 0 150px}
@@ -127,7 +127,7 @@ header.scrolled{position:fixed;top:0;background:rgba(15,19,22,.92);backdrop-filt
 /* ресторан */
 .dining{position:relative;color:#fff;background:var(--night)}
 .dining-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:0;align-items:stretch}
-.dining-ph{min-height:560px;background:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1300&q=80') center/cover no-repeat}
+.dining-ph{min-height:560px;background:url('img/photo-2.jpg') center/cover no-repeat}
 .dining-body{padding:96px 76px;display:flex;flex-direction:column;justify-content:center}
 .dining-body h2{font-size:clamp(32px,3.8vw,48px);margin-top:18px}
 .dining-body p{font-size:15.5px;font-weight:300;color:var(--on-dark);margin-top:18px;max-width:460px}
@@ -143,6 +143,14 @@ header.scrolled{position:fixed;top:0;background:rgba(15,19,22,.92);backdrop-filt
 .amen .ic{width:62px;height:62px;margin:0 auto 22px;border:1px solid var(--brass);border-radius:50%;display:grid;place-items:center;font-size:24px;color:var(--brass)}
 .amen h3{font-size:21px}
 .amen p{font-size:13.5px;font-weight:300;color:var(--mut);margin-top:9px}
+
+/* галерея */
+.gal-strip{display:flex;gap:14px;overflow-x:auto;margin-top:48px;padding-bottom:14px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.gal-strip .shot{flex:0 0 min(420px,82vw);height:340px;background:var(--char) center/cover no-repeat;scroll-snap-align:start;position:relative}
+.gal-strip .shot span{position:absolute;left:0;bottom:0;background:rgba(15,19,22,.78);color:var(--on-dark);font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;padding:8px 14px}
+.gal-strip::-webkit-scrollbar{height:8px}
+.gal-strip::-webkit-scrollbar-thumb{background:var(--brass);border-radius:99px}
+.gal-strip::-webkit-scrollbar-track{background:var(--line-l)}
 
 /* Сити-Чесс */
 .chess{position:relative;background:var(--ivory);overflow:hidden}
@@ -251,7 +259,7 @@ footer a:hover{color:var(--brass-3)}
 </head>
 <body>
 
-<div class="demo-note" id="demoNote"><b>DEMO-макет</b> · адрес, телефоны и рейтинги — реальные · цены на номера — диапазон из агрегаторов · фото — временные (реальные — Instagram @marcopolo_elista)</div>
+<div class="demo-note" id="demoNote"><b>DEMO-макет</b> · адрес, телефоны, рейтинги и фотографии — реальные (фото — из открытых галерей сервисов бронирования; соответствие фото категориям номеров уточняется у отеля) · цены — диапазон из агрегаторов</div>
 
 <header id="hdr">
   <div class="wrap head-in">
@@ -334,7 +342,7 @@ footer a:hover{color:var(--brass-3)}
     </div>
 
     <div class="room reveal">
-      <div class="room-ph" style="background-image:url('https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1300&q=80')"></div>
+      <div class="room-ph" style="background-image:url('img/photo-5.jpg')"></div>
       <div class="room-body">
         <span class="tag">Категория I</span>
         <h3>Стандарт</h3>
@@ -345,18 +353,18 @@ footer a:hover{color:var(--brass-3)}
     </div>
 
     <div class="room flip reveal">
-      <div class="room-ph" style="background-image:url('https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=1300&q=80')"></div>
+      <div class="room-ph" style="background-image:url('img/photo-12.jpg')"></div>
       <div class="room-body">
         <span class="tag">Категория II</span>
         <h3>Стандарт с террасой</h3>
-        <p>Все удобства стандарта плюс выход на личную террасу с видом на внутренний двор. Утренний кофе на свежем воздухе.</p>
+        <p>Все удобства стандарта плюс выход на личную террасу с балюстрадой и видом на степь. Утренний кофе на свежем воздухе.</p>
         <div class="room-meta"><span class="price">по запросу</span><span class="per">цену уточним при брони</span></div>
         <a href="#booking" class="btn btn-line-d room-book" data-room="Стандарт с террасой">Забронировать</a>
       </div>
     </div>
 
     <div class="room reveal">
-      <div class="room-ph" style="background-image:url('https://images.unsplash.com/photo-1540518614846-7eded433c457?w=1300&q=80')"></div>
+      <div class="room-ph" style="background-image:url('img/photo-14.jpg')"></div>
       <div class="room-body">
         <span class="tag">Категория III</span>
         <h3>Полулюкс · Superior</h3>
@@ -367,7 +375,7 @@ footer a:hover{color:var(--brass-3)}
     </div>
 
     <div class="room flip reveal">
-      <div class="room-ph" style="background-image:url('https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=1300&q=80')"></div>
+      <div class="room-ph" style="background-image:url('img/photo-13.jpg')"></div>
       <div class="room-body">
         <span class="tag">Категория IV</span>
         <h3>Люкс</h3>
@@ -396,6 +404,7 @@ footer a:hover{color:var(--brass-3)}
         <div><span>—</span>Финская сауна и бильярд — не выходя из отеля</div>
       </div>
       <a class="btn btn-line reveal" href="tel:+79054092525">Заказать банкет</a>
+      <p class="reveal" style="font-size:12.5px;color:var(--on-dark-mut);margin-top:18px">Фотографии ресторана и веранды — в Instagram @marcopolo_elista</p>
     </div>
   </div>
 </section>
@@ -411,6 +420,23 @@ footer a:hover{color:var(--brass-3)}
       <div class="amen reveal" style="transition-delay:.07s"><div class="ic">♨</div><h3>Финская сауна</h3><p>С зоной отдыха; бронирование — на стойке регистрации</p></div>
       <div class="amen reveal" style="transition-delay:.14s"><div class="ic">⚑</div><h3>Огороженная парковка</h3><p>Бесплатно на территории — место найдётся и в высокий сезон</p></div>
       <div class="amen reveal" style="transition-delay:.21s"><div class="ic">✦</div><h3>Стойка 24/7</h3><p>Заезд с 14:00, выезд до 12:00; ранний заезд — по запросу</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="gallery" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Галерея</span>
+      <h2>Отель в фотографиях</h2>
+    </div>
+    <div class="gal-strip reveal">
+      <div class="shot" style="background-image:url('img/photo-9.jpg')"><span>Бассейн</span></div>
+      <div class="shot" style="background-image:url('img/photo-6.jpg')"><span>Финская сауна</span></div>
+      <div class="shot" style="background-image:url('img/photo-11.jpg')"><span>Бильярдная</span></div>
+      <div class="shot" style="background-image:url('img/photo-4.jpg')"><span>Гостиная люкса</span></div>
+      <div class="shot" style="background-image:url('img/photo-7.jpg')"><span>Номер с раздельными кроватями</span></div>
+      <div class="shot" style="background-image:url('img/photo-3.jpg')"><span>Марко Поло · Сити-Чесс</span></div>
     </div>
   </div>
 </section>
@@ -549,7 +575,7 @@ footer a:hover{color:var(--brass-3)}
     </div>
     <div class="foot-bottom">
       <span>© 2026 Отель Марко Поло, Элиста. Демо-макет.</span>
-      <span>Цены — диапазон из агрегаторов · фото временные</span>
+      <span>Цены — диапазон из агрегаторов · фото — из открытых галерей сервисов бронирования</span>
     </div>
   </div>
 </footer>
